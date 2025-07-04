@@ -1,19 +1,20 @@
 INFO:     Will watch for changes in these directories: ['/home/ubuntu/labs/sowGenGit/backend']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [7500] using StatReload
-INFO:     Started server process [7515]
+INFO:     Started reloader process [7918] using StatReload
+INFO:     Started server process [7933]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+INFO:     92.187.130.205:50006 - "OPTIONS /generar HTTP/1.1" 200 OK
 Resposta completa de chat_response: {
   "chat_response": {
     "api_format": "COHERE",
     "chat_history": [
       {
-        "message": "\nGenera un resumen ejecutivo y una descripción técnica del proyecto \"Bluegarden\" para el cliente Visma utilizando los siguientes servicios de Oracle Cloud: OKE, ATP.\n",
+        "message": "\nGenera un resumen ejecutivo y una descripción técnica del proyecto \"bluegarden\" para el cliente Visma utilizando los siguientes servicios de Oracle Cloud: atp, oke.\n",
         "role": "USER"
       },
       {
-        "message": "### **Resumen Ejecutivo: Proyecto Bluegarden para Visma**\n\n**Objetivo del Proyecto:**  \nEl proyecto Bluegarden tiene como objetivo modernizar y escalar la infraestructura de Visma para su plataforma de gestión de recursos humanos (HR), mejorando la eficiencia, la seguridad y la disponibilidad de los servicios. Utilizando Oracle Cloud Infrastructure (OCI), específicamente Oracle Container Engine for Kubernetes (OKE) y Autonomous Transaction Processing (ATP), se busca crear una solución robusta, escalable y automatizada que soporte el crecimiento de Visma y sus clientes.\n\n**Solución Propuesta:**  \nBluegarden aprovechará **OKE** para orquestar y gestionar contenedores de aplicaciones, permitiendo una implementación rápida y escalable de los servicios de HR. Además, **ATP** se integrará como la base de datos gestionada y autónoma, garantizando alto rendimiento, disponibilidad y seguridad para las transacciones críticas de la plataforma. Esta combinación de servicios de Oracle Cloud asegurará una infraestructura moderna, eficiente y fácil de mantener.\n\n**Beneficios Esperados:**  \n- **Escalabilidad:** Capacidad para manejar picos de demanda sin interrupciones.  \n- **Reducción de Costos:** Automatización y optimización de recursos con OKE y ATP.  \n- **Alta Disponibilidad:** ATP garantiza una disponibilidad del 99.95% con recuperación automática.  \n- **Seguridad Avanzada:** Protección de",
+        "message": "### **Resumen Ejecutivo: Proyecto \"BlueGarden\" para Visma**\n\n**Objetivo del Proyecto:**  \nEl proyecto \"BlueGarden\" tiene como objetivo modernizar y optimizar la infraestructura de Visma, un líder en soluciones de software empresarial, mediante la adopción de servicios en la nube de Oracle Cloud. El proyecto se centra en mejorar la escalabilidad, seguridad y eficiencia operativa de las aplicaciones críticas de Visma, utilizando **Oracle Autonomous Transaction Processing (ATP)** para la gestión de bases de datos y **Oracle Container Engine for Kubernetes (OKE)** para la orquestación de contenedores.\n\n**Beneficios Clave:**  \n1. **Escalabilidad y Rendimiento:** ATP proporciona una base de datos autónomos y auto-optimizada, garantizando un alto rendimiento y disponibilidad para las transacciones críticas de Visma.  \n2. **Eficiencia Operativa:** OKE simplifica la implementación y gestión de aplicaciones en contenedores, reduciendo el tiempo de aprovisionamiento y los costos operativos.  \n3. **Seguridad Avanzada:** Ambos servicios ofrecen características de seguridad integradas, como encriptación de datos y control de acceso, alineándose con los estándares de cumplimiento de Visma.  \n4. **Reducción de Costos:** La automatización de ATP y la optimización de recursos en OKE permiten una reducción significativa en los costos de infraestructura y mantenimiento.  \n\n**Resultados Esperados:**  \nVisma podrá ofrecer",
         "role": "CHATBOT",
         "tool_calls": null
       }
@@ -25,18 +26,25 @@ Resposta completa de chat_response: {
     "is_search_required": null,
     "prompt": null,
     "search_queries": null,
-    "text": "### **Resumen Ejecutivo: Proyecto Bluegarden para Visma**\n\n**Objetivo del Proyecto:**  \nEl proyecto Bluegarden tiene como objetivo modernizar y escalar la infraestructura de Visma para su plataforma de gestión de recursos humanos (HR), mejorando la eficiencia, la seguridad y la disponibilidad de los servicios. Utilizando Oracle Cloud Infrastructure (OCI), específicamente Oracle Container Engine for Kubernetes (OKE) y Autonomous Transaction Processing (ATP), se busca crear una solución robusta, escalable y automatizada que soporte el crecimiento de Visma y sus clientes.\n\n**Solución Propuesta:**  \nBluegarden aprovechará **OKE** para orquestar y gestionar contenedores de aplicaciones, permitiendo una implementación rápida y escalable de los servicios de HR. Además, **ATP** se integrará como la base de datos gestionada y autónoma, garantizando alto rendimiento, disponibilidad y seguridad para las transacciones críticas de la plataforma. Esta combinación de servicios de Oracle Cloud asegurará una infraestructura moderna, eficiente y fácil de mantener.\n\n**Beneficios Esperados:**  \n- **Escalabilidad:** Capacidad para manejar picos de demanda sin interrupciones.  \n- **Reducción de Costos:** Automatización y optimización de recursos con OKE y ATP.  \n- **Alta Disponibilidad:** ATP garantiza una disponibilidad del 99.95% con recuperación automática.  \n- **Seguridad Avanzada:** Protección de",
+    "text": "### **Resumen Ejecutivo: Proyecto \"BlueGarden\" para Visma**\n\n**Objetivo del Proyecto:**  \nEl proyecto \"BlueGarden\" tiene como objetivo modernizar y optimizar la infraestructura de Visma, un líder en soluciones de software empresarial, mediante la adopción de servicios en la nube de Oracle Cloud. El proyecto se centra en mejorar la escalabilidad, seguridad y eficiencia operativa de las aplicaciones críticas de Visma, utilizando **Oracle Autonomous Transaction Processing (ATP)** para la gestión de bases de datos y **Oracle Container Engine for Kubernetes (OKE)** para la orquestación de contenedores.\n\n**Beneficios Clave:**  \n1. **Escalabilidad y Rendimiento:** ATP proporciona una base de datos autónomos y auto-optimizada, garantizando un alto rendimiento y disponibilidad para las transacciones críticas de Visma.  \n2. **Eficiencia Operativa:** OKE simplifica la implementación y gestión de aplicaciones en contenedores, reduciendo el tiempo de aprovisionamiento y los costos operativos.  \n3. **Seguridad Avanzada:** Ambos servicios ofrecen características de seguridad integradas, como encriptación de datos y control de acceso, alineándose con los estándares de cumplimiento de Visma.  \n4. **Reducción de Costos:** La automatización de ATP y la optimización de recursos en OKE permiten una reducción significativa en los costos de infraestructura y mantenimiento.  \n\n**Resultados Esperados:**  \nVisma podrá ofrecer",
     "tool_calls": null,
     "usage": {
       "completion_tokens": 299,
       "completion_tokens_details": null,
-      "prompt_tokens": 35,
+      "prompt_tokens": 36,
       "prompt_tokens_details": null,
-      "total_tokens": 334
+      "total_tokens": 335
     }
   },
   "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
   "model_version": "1.0"
 }
-INFO:     92.187.130.205:63791 - "POST /generar HTTP/1.1" 500 Internal Server Error
-INFO:     196.251.86.124:33100 - "GET / HTTP/1.1" 404 Not Found
+INFO:     92.187.130.205:50006 - "POST /generar HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [7933]
+INFO:     Started server process [8054]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

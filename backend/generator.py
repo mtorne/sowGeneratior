@@ -92,38 +92,70 @@ Genera un resumen ejecutivo y una descripción técnica del proyecto "{datos['pr
      # Carga plantilla Word
     doc = DocxTemplate("Application_Validation_Template.docx")
 
-
-
+   # In generator.py, update the contenido dictionary to match template variable names:
     contenido = {
-    "cliente": datos.get('cliente'),
-    "proyecto": datos.get('proyecto'),
-    "servicios_oci": datos.get('servicios_oci', []),
-    "resumen": resumen,
-    "detalles": detalles,
-
-    # Optional extras
-    "isv_name": datos.get('isv_name'),
-    "app_name": datos.get('app_name'),
-    "fecha": datos.get('fecha'),
-    "version": datos.get('version'),
-
-    "historial": datos.get('historial', []),
-    "estado": datos.get('estado'),
-    "participantes": datos.get('participantes', []),
-    "perfil_empresa": datos.get('perfil_empresa', {}),
-    "app_descripcion": datos.get('app_descripcion'),
-    "app_tecnologias": datos.get('app_tecnologias'),
-    "app_entorno": datos.get('app_entorno'),
-    "alcance": datos.get('alcance'),
-    "hitos": datos.get('hitos', []),
-    "criterios": datos.get('criterios', []),
-    "arquitectura_actual": datos.get('arquitectura_actual', {}),
-    "arquitectura_objetivo_diagrama": datos.get('arquitectura_objetivo_diagrama'),
-    "arquitectura_objetivo_componentes": datos.get('arquitectura_objetivo_componentes', []),
-    "detalles_implementacion": datos.get('detalles_implementacion'),
-    "feedback_isv": datos.get('feedback_isv'),
-    "feedback_oracle": datos.get('feedback_oracle')
+     "isv_name": datos.get('isv_name'),
+     "app_name": datos.get('app_name'),
+     "version": datos.get('version'),
+     "date": datos.get('fecha'),
+    
+     # Project Participants
+     "participants": datos.get('participantes', []),
+    
+     # ISV Company Profile
+     "company_profile": {
+        "legal_name": datos.get('perfil_empresa', {}).get('nombre_legal'),
+        "country": datos.get('perfil_empresa', {}).get('pais'),
+        "description": datos.get('perfil_empresa', {}).get('descripcion'),
+        "industry": datos.get('perfil_empresa', {}).get('industria'),
+        "website": datos.get('perfil_empresa', {}).get('sitio_web')
+     },
+    
+     # Project Overview
+     "project_overview": datos.get('resumen'),
+    
+     # Scope
+     "scope": datos.get('alcance'),
+    
+     # Major Project Milestones
+     "milestones": datos.get('hitos', []),
+    
+     # Acceptance Criteria
+     "acceptance_criteria": datos.get('criterios', []),
+    
+     # Current State Architecture
+     "current_architecture": {
+        "diagram_url": datos.get('arquitectura_actual', {}).get('diagrama'),
+        "description": datos.get('arquitectura_actual', {}).get('descripcion')
+     },
+    
+     # Technology Stack
+     "technology_stack": datos.get('app_tecnologias', []),
+    
+     # OCI Service Sizing
+     "oci_services": datos.get('servicios_oci', []),
+    
+     # Future State Architecture
+     "future_architecture": {
+        "diagram_url": datos.get('arquitectura_objetivo_diagrama'),
+        "overview": datos.get('detalles'),
+        "components": datos.get('arquitectura_objetivo_componentes', [])
+     },
+    
+     # Implementation Details
+     "implementation_details": datos.get('detalles_implementacion'),
+    
+     # Closing Feedback
+     "closing_feedback": {
+        "isv": datos.get('feedback_isv'),
+        "oracle": datos.get('feedback_oracle')
+     },
+    
+     # Copyright
+     "copyright_year": "2023"  # or get from datos if available
     }
+
+
 
     doc.render(contenido)
 
