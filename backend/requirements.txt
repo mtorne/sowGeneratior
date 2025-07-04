@@ -2,4 +2,8 @@ fastapi
 uvicorn
 pydantic
 oci
+requests
+jinja2
+python-multipart
+docxtpl
 

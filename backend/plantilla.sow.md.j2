@@ -1,0 +1,174 @@
+# Oracle Cloud Infrastructure - Application Validation
+
+**ISV:** {{ isv_name | default("ISV Desconocido") }}  
+**Application:** {{ app_name | default("Aplicación sin nombre") }}  
+**Statement of Work**  
+**Date:** {{ fecha | default("DD-MM-AAAA") }}  
+**Version:** {{ version | default("1.0") }}
+
+---
+
+## Disclaimer
+
+Este documento contiene información confidencial entre {{ isv_name | default("ISV Desconocido") }} y Oracle Corp. No debe ser distribuido sin consentimiento previo.
+
+---
+
+## Tabla de contenido
+1. [Historial de versiones](#historial-de-versiones)
+2. [Estado y próximos pasos](#estado-y-próximos-pasos)
+3. [Participantes del proyecto](#participantes-del-proyecto)
+4. [Resumen del proyecto](#resumen-del-proyecto)
+5. [Arquitectura actual](#arquitectura-actual)
+6. [Arquitectura objetivo](#arquitectura-objetivo)
+7. [Detalles de implementación](#detalles-de-implementación)
+8. [Comentarios finales](#comentarios-finales)
+
+---
+
+## Historial de versiones
+
+| Versión | Fecha | Modificado por | Descripción |
+|--------|--------|----------------|-------------|
+{% if historial %}
+{% for version in historial %}
+| {{ version.numero | default("1.0") }} | {{ version.fecha | default("DD-MM-AAAA") }} | {{ version.autor | default("Anónimo") }} | {{ version.descripcion | default("Sin cambios registrados") }} |
+{% endfor %}
+{% else %}
+| 1.0 | DD-MM-AAAA | N/A | Documento inicial |
+{% endif %}
+
+---
+
+## Estado y próximos pasos
+
+{{ estado | default("Pendiente de completar por el ISV.") }}
+
+---
+
+## Participantes del proyecto
+
+| Entidad | Nombre | Rol | Email |
+|---------|--------|-----|-------|
+{% if participantes %}
+{% for p in participantes %}
+| {{ p.entidad | default("Entidad") }} | {{ p.nombre | default("Nombre") }} | {{ p.rol | default("Rol") }} | {{ p.email | default("Email") }} |
+{% endfor %}
+{% else %}
+| Oracle | N/A | N/A | N/A |
+| {{ isv_name | default("ISV") }} | N/A | N/A | N/A |
+{% endif %}
+
+---
+
+## Resumen del proyecto
+
+**Perfil del ISV:**
+
+- Nombre legal: {{ perfil_empresa.nombre | default("N/A") }}
+- País: {{ perfil_empresa.pais | default("N/A") }}
+- Descripción: {{ perfil_empresa.descripcion | default("No proporcionada") }}
+- Industria objetivo: {{ perfil_empresa.industria | default("N/A") }}
+- Sitio web: {{ perfil_empresa.web | default("https://ejemplo.com") }}
+
+**Aplicación en alcance:**
+
+- Nombre: {{ app_name | default("Aplicación sin nombre") }}
+- Descripción general: {{ app_descripcion | default("Sin descripción disponible") }}
+- Tecnologías clave: {{ app_tecnologias | default("No especificadas") }}
+- ¿On-Prem o Cloud?: {{ app_entorno | default("No indicado") }}
+
+{{ resumen }}
+
+---
+
+## Alcance
+
+{{ alcance | default("Validación del despliegue de la aplicación en Oracle Cloud Infrastructure con enfoque Lift & Shift.") }}
+
+---
+
+## Hitos principales
+
+| Hito | Fecha objetivo | Completado | Comentarios |
+|------|----------------|------------|-------------|
+{% if hitos %}
+{% for h in hitos %}
+| {{ h.nombre | default("Sin nombre") }} | {{ h.fecha | default("DD-MM-AAAA") }} | {{ h.completado | default("No") }} | {{ h.comentarios | default("N/A") }} |
+{% endfor %}
+{% else %}
+| Inicio del proyecto | DD-MM-AAAA | No | A definir |
+{% endif %}
+
+---
+
+## Criterios de aceptación
+
+| Métrica | Criterio | Estado | ¿Aceptable? |
+|---------|----------|--------|-------------|
+{% if criterios %}
+{% for c in criterios %}
+| {{ c.metrica | default("N/A") }} | {{ c.criterio | default("N/A") }} | {{ c.estado | default("Pendiente") }} | {{ c.aceptable | default("NO") }} |
+{% endfor %}
+{% else %}
+| Tiempo de respuesta | < 200ms | Pendiente | NO |
+{% endif %}
+
+---
+
+## Arquitectura actual
+
+**Descripción:**  
+{{ arquitectura_actual.descripcion | default("Descripción de arquitectura no proporcionada.") }}
+
+**Tecnologías utilizadas:**
+{% if arquitectura_actual.stack %}
+{% for tech in arquitectura_actual.stack %}
+- {{ tech }}
+{% endfor %}
+{% else %}
+- No se especificaron tecnologías utilizadas.
+{% endif %}
+
+{{ detalles }}
+---
+
+## Arquitectura objetivo
+
+**Servicios OCI involucrados:**
+{% if servicios_oci %}
+{% for servicio in servicios_oci %}
+- {{ servicio }}
+{% endfor %}
+{% else %}
+- No se especificaron servicios.
+{% endif %}
+
+**Diagrama de arquitectura objetivo:**  
+{{ arquitectura_objetivo_diagrama | default("Diagrama no disponible.") }}
+
+**Resumen de componentes:**
+{% if arquitectura_objetivo_componentes %}
+{% for componente in arquitectura_objetivo_componentes %}
+- **{{ componente.nombre | default("Componente sin nombre") }}:** {{ componente.descripcion | default("Sin descripción") }}
+{% endfor %}
+{% else %}
+- Componentes no especificados.
+{% endif %}
+
+---
+
+## Detalles de implementación
+
+{{ detalles_implementacion | default("No se han proporcionado detalles de implementación.") }}
+
+---
+
+## Comentarios finales
+
+**{{ isv_name | default("ISV") }}:**  
+{{ feedback_isv | default("Sin comentarios.") }}
+
+**Oracle ISV Cloud Labs:**  
+{{ feedback_oracle | default("Sin comentarios.") }}
+
