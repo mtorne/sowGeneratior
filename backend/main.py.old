@@ -1,0 +1,36 @@
+from fastapi import FastAPI, Request
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+import oci
+from oci.generative_ai_inference.models import GenerateTextDetails
+
+app = FastAPI()
+
+# Configura CORS per permetre frontend local
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# OCI config
+config = oci.config.from_file("~/.oci/config", "DEFAULT")
+client = oci.generative_ai_inference.GenerativeAiInferenceClient(config)
+modelid = "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceya4tdabclcsqbc3yj2mozvvqoq5ccmliv3354hfu3mx6bq"
+
+# Petició de l'usuari
+class PromptRequest(BaseModel):
+    prompt: str
+
+@app.post("/generate")
+def generate_text(request: PromptRequest):
+    details = GenerateTextDetails(
+        model_id=modelid,  # substitueix si cal pel teu model_id
+        prompt=request.prompt,
+        max_tokens=300,
+        temperature=0.7
+    )
+    response = client.generate_text(generate_text_details=details)
+    return {"response": response.data.generated_text}
+

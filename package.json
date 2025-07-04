@@ -1,14 +1,27 @@
 {
-  "name": "oci-chat-app",
+  "name": "sowgengit",
   "version": "1.0.0",
-  "description": "Chat app using OCI Generative AI",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mtorne/sowGeneratior.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mtorne/sowGeneratior/issues"
+  },
+  "homepage": "https://github.com/mtorne/sowGeneratior#readme",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "express": "^4.18.2",
-    "oci-common": "^2.110.0"
+    "axios": "^1.10.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "oci-sdk": "^2.112.0"
   }
 }

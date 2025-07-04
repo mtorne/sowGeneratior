@@ -1,0 +1,185 @@
+INFO:     Will watch for changes in these directories: ['/home/ubuntu/labs/sowGenGit/backend']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [2923] using StatReload
+INFO:     Started server process [2928]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     92.187.130.205:56774 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     92.187.130.205:56792 - "OPTIONS /generatechat HTTP/1.1" 200 OK
+Resposta completa de chat_response: {
+  "chat_response": {
+    "api_format": "COHERE",
+    "chat_history": [
+      {
+        "message": "Hola carallot",
+        "role": "USER"
+      },
+      {
+        "message": "¡Hola! ¿Cómo estás? ¿En qué puedo ayudarte hoy?",
+        "role": "CHATBOT",
+        "tool_calls": null
+      }
+    ],
+    "citations": null,
+    "documents": null,
+    "error_message": null,
+    "finish_reason": "COMPLETE",
+    "is_search_required": null,
+    "prompt": null,
+    "search_queries": null,
+    "text": "¡Hola! ¿Cómo estás? ¿En qué puedo ayudarte hoy?",
+    "tool_calls": null,
+    "usage": {
+      "completion_tokens": 19,
+      "completion_tokens_details": null,
+      "prompt_tokens": 5,
+      "prompt_tokens_details": null,
+      "total_tokens": 24
+    }
+  },
+  "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
+  "model_version": "1.0"
+}
+INFO:     92.187.130.205:56792 - "POST /generatechat HTTP/1.1" 200 OK
+Resposta completa de chat_response: {
+  "chat_response": {
+    "api_format": "COHERE",
+    "chat_history": [
+      {
+        "message": "Parles català?\n",
+        "role": "USER"
+      },
+      {
+        "message": "Sí, parlo català. Com a model lingüístic desenvolupat per Cohere, puc comprendre i respondre en català, així com en moltes altres llengües. Què necessites avui?",
+        "role": "CHATBOT",
+        "tool_calls": null
+      }
+    ],
+    "citations": null,
+    "documents": null,
+    "error_message": null,
+    "finish_reason": "COMPLETE",
+    "is_search_required": null,
+    "prompt": null,
+    "search_queries": null,
+    "text": "Sí, parlo català. Com a model lingüístic desenvolupat per Cohere, puc comprendre i respondre en català, així com en moltes altres llengües. Què necessites avui?",
+    "tool_calls": null,
+    "usage": {
+      "completion_tokens": 50,
+      "completion_tokens_details": null,
+      "prompt_tokens": 6,
+      "prompt_tokens_details": null,
+      "total_tokens": 56
+    }
+  },
+  "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
+  "model_version": "1.0"
+}
+INFO:     92.187.130.205:56840 - "POST /generatechat HTTP/1.1" 200 OK
+Resposta completa de chat_response: {
+  "chat_response": {
+    "api_format": "COHERE",
+    "chat_history": [
+      {
+        "message": "Saber que es un carallot\n\n",
+        "role": "USER"
+      },
+      {
+        "message": "La palabra **\"carallot\"** es un término coloquial y vulgar en **catalán** que se refiere de manera despectiva a una persona tonta, estúpida o incompetente. Es una variante más coloquial y grosera de \"carall\" (penis en catalán), y se usa como insulto para menospreciar a alguien. Su uso es considerado **ofensivo** y no es adecuado en contextos formales o respetuosos. \n\nEn resumen:  \n- **Origen**: Del catalán, relacionado con \"carall\" (pene).  \n- **Significado**: Insulto para referirse a alguien como tonto/inútil.  \n- **Contexto**: Coloquial y vulgar, evítalo en situaciones serias o con personas desconocidas.  \n\n*Nota: Las palabras vulgares varían entre culturas y lenguas. En catalán, \"carallot\" es similar al español \"gilipollas\" o \"imbécil\", pero con un tono más regional.*",
+        "role": "CHATBOT",
+        "tool_calls": null
+      }
+    ],
+    "citations": null,
+    "documents": null,
+    "error_message": null,
+    "finish_reason": "COMPLETE",
+    "is_search_required": null,
+    "prompt": null,
+    "search_queries": null,
+    "text": "La palabra **\"carallot\"** es un término coloquial y vulgar en **catalán** que se refiere de manera despectiva a una persona tonta, estúpida o incompetente. Es una variante más coloquial y grosera de \"carall\" (penis en catalán), y se usa como insulto para menospreciar a alguien. Su uso es considerado **ofensivo** y no es adecuado en contextos formales o respetuosos. \n\nEn resumen:  \n- **Origen**: Del catalán, relacionado con \"carall\" (pene).  \n- **Significado**: Insulto para referirse a alguien como tonto/inútil.  \n- **Contexto**: Coloquial y vulgar, evítalo en situaciones serias o con personas desconocidas.  \n\n*Nota: Las palabras vulgares varían entre culturas y lenguas. En catalán, \"carallot\" es similar al español \"gilipollas\" o \"imbécil\", pero con un tono más regional.*",
+    "tool_calls": null,
+    "usage": {
+      "completion_tokens": 209,
+      "completion_tokens_details": null,
+      "prompt_tokens": 9,
+      "prompt_tokens_details": null,
+      "total_tokens": 218
+    }
+  },
+  "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
+  "model_version": "1.0"
+}
+INFO:     92.187.130.205:56895 - "POST /generatechat HTTP/1.1" 200 OK
+Resposta completa de chat_response: {
+  "chat_response": {
+    "api_format": "COHERE",
+    "chat_history": [
+      {
+        "message": "quins idiomes parles?\n\n\n",
+        "role": "USER"
+      },
+      {
+        "message": "He parlat català, castellà, anglès i francès. També puc entendre i respondre en altres idiomes, com l'alemany, l'italià i el portuguès, però amb un nivell més bàsic. Si tens alguna pregunta o necessites ajuda en algun d'aquests idiomes, no dubtis a demanar-m'ho!",
+        "role": "CHATBOT",
+        "tool_calls": null
+      }
+    ],
+    "citations": null,
+    "documents": null,
+    "error_message": null,
+    "finish_reason": "COMPLETE",
+    "is_search_required": null,
+    "prompt": null,
+    "search_queries": null,
+    "text": "He parlat català, castellà, anglès i francès. També puc entendre i respondre en altres idiomes, com l'alemany, l'italià i el portuguès, però amb un nivell més bàsic. Si tens alguna pregunta o necessites ajuda en algun d'aquests idiomes, no dubtis a demanar-m'ho!",
+    "tool_calls": null,
+    "usage": {
+      "completion_tokens": 84,
+      "completion_tokens_details": null,
+      "prompt_tokens": 7,
+      "prompt_tokens_details": null,
+      "total_tokens": 91
+    }
+  },
+  "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
+  "model_version": "1.0"
+}
+INFO:     92.187.130.205:57033 - "POST /generatechat HTTP/1.1" 200 OK
+Resposta completa de chat_response: {
+  "chat_response": {
+    "api_format": "COHERE",
+    "chat_history": [
+      {
+        "message": "haben du der buch?\n\n\n\n",
+        "role": "USER"
+      },
+      {
+        "message": "Es scheint, als ob du auf Deutsch fragen möchtest, ob ich ein Buch habe. Allerdings ist deine Frage grammatikalisch nicht ganz korrekt. Die richtige Formulierung wäre:\n\n**\"Hast du das Buch?\"**\n\n(Bedeutung: \"Do you have the book?\")\n\nFalls du eine andere Frage stellen wolltest, lass es mich bitte wissen! 😊",
+        "role": "CHATBOT",
+        "tool_calls": null
+      }
+    ],
+    "citations": null,
+    "documents": null,
+    "error_message": null,
+    "finish_reason": "COMPLETE",
+    "is_search_required": null,
+    "prompt": null,
+    "search_queries": null,
+    "text": "Es scheint, als ob du auf Deutsch fragen möchtest, ob ich ein Buch habe. Allerdings ist deine Frage grammatikalisch nicht ganz korrekt. Die richtige Formulierung wäre:\n\n**\"Hast du das Buch?\"**\n\n(Bedeutung: \"Do you have the book?\")\n\nFalls du eine andere Frage stellen wolltest, lass es mich bitte wissen! 😊",
+    "tool_calls": null,
+    "usage": {
+      "completion_tokens": 87,
+      "completion_tokens_details": null,
+      "prompt_tokens": 7,
+      "prompt_tokens_details": null,
+      "total_tokens": 94
+    }
+  },
+  "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
+  "model_version": "1.0"
+}
+INFO:     92.187.130.205:57161 - "POST /generatechat HTTP/1.1" 200 OK
