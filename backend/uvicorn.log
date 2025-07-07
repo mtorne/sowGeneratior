@@ -1,20 +1,20 @@
 INFO:     Will watch for changes in these directories: ['/home/ubuntu/labs/sowGenGit/backend']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [7918] using StatReload
-INFO:     Started server process [7933]
+INFO:     Started reloader process [2692] using StatReload
+INFO:     Started server process [2703]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     92.187.130.205:50006 - "OPTIONS /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:60374 - "OPTIONS /generar HTTP/1.1" 200 OK
 Resposta completa de chat_response: {
   "chat_response": {
     "api_format": "COHERE",
     "chat_history": [
       {
-        "message": "\nGenera un resumen ejecutivo y una descripción técnica del proyecto \"bluegarden\" para el cliente Visma utilizando los siguientes servicios de Oracle Cloud: atp, oke.\n",
+        "message": "\nGenerate a comprehensive Oracle Cloud Infrastructure (OCI) Application Validation document for client TGW using the following OCI services: Openshift, VM with GPU, Oracle db on IaaS.\n\n\nFollow this exact structure and include all specified sections:\n\n1. **Document Header**\n- ISV: [Legal Company Name]\n- Application: [Product Name]\n- Type: Statement of Work\n- Date: [Current Date]\n- Version: [Version Number]\n- Confidentiality disclaimer\n\n2. **Version History Table**\n- 3-5 version entries showing evolution\n- Include version, date, author, description\n\n3. **Project Status**\n- Current phase (Planning/Implementation/Validation)\n- Next 3 critical actions with owners\n\n4. **Participant Table**\n- Oracle team members (3 roles)\n- Client team members (3 roles)\n- Include names, titles, emails\n\n5. **Project Summary**\n- Client business overview (1 paragraph)\n- Application purpose (1 paragraph)\n- Key technologies (bulleted list)\n- OCI services being implemented (section highlighting Openshift, VM with GPU, Oracle db on IaaS)\n\n6. **Scope Definition**\n- In-scope components (bulleted list)\n- Out-of-scope items (bulleted list)\n- Validation boundaries\n\n7. **Milestone Timeline**\n- 5-7 key milestones\n- Dates, completion status, dependencies\n- Include OCI service implementation phases\n\n8. **Validation Criteria**\n- Technical metrics table (performance, availability)\n- Security requirements\n- Compliance checks\n\n9. **Architecture Sections**\nCurrent Environment:\n- Diagram description\n- Technology stack\n- Pain points\n\nOCI Target Architecture:\n- Services diagram (Openshift, VM with GPU, Oracle db on IaaS integration)\n- Component mapping\n- Migration approach\n\n10. **Implementation Plan**\n- Configuration details for Openshift and other services\n- Security settings\n- Monitoring setup\n\n11. **Sign-off Section**\n- Client acceptance criteria\n- Oracle validation approval\n- Next steps post-validation\n\nTechnical Requirements:\n1. Use exact OCI service names: Openshift, VM with GPU, Oracle db on IaaS\n2. Include 3-5 technical specifications per service\n3. Add realistic performance metrics\n4. Cover security configurations\n5. Address scalability considerations\n\nFormatting Rules:\n- Markdown syntax\n- Tables for comparative data\n- Bullet points for lists\n- Bold for key terms\n- Consistent heading levels\n\nGenerate complete, technically accurate content for all sections, focusing on practical implementation of Openshift, VM with GPU, Oracle db on IaaS for TGW's environment.\n\nThe summary , scope and expectations of the PoC are the following : - Validation Description: General description of the current-state architecture diagram.\nAll OSS services (nearly 300 microservices)  are delivered as docker images. Kubernetes is used as container orchestrator both on public and on premise cloud. Services are deployed with a set of automatically generated helmfiles from our internal gitlab instance. \nOSS requires database (Postgres or Oracle), Apache Kafka outside k8s cluster. OSS requires k8s storage provisioner and S3-api compatible object storage.\nExternal https traffic is directed via ingress controller with dedicated loadbalancer.\nMost of our microservices are tightly coupled and non scalable.\n\nExpectations:\nSuccessfully validate their application stack in a replicated, containerized environment on OCI that mirrors the customer’s setup. This includes ensuring functional compatibility, performance within latency requirements, and readiness for future automation or cloud-native enhancements—ultimately enabling a smooth lift-and-shift migration path for customer environments\n\n",
         "role": "USER"
       },
       {
-        "message": "### **Resumen Ejecutivo: Proyecto \"BlueGarden\" para Visma**\n\n**Objetivo del Proyecto:**  \nEl proyecto \"BlueGarden\" tiene como objetivo modernizar y optimizar la infraestructura de Visma, un líder en soluciones de software empresarial, mediante la adopción de servicios en la nube de Oracle Cloud. El proyecto se centra en mejorar la escalabilidad, seguridad y eficiencia operativa de las aplicaciones críticas de Visma, utilizando **Oracle Autonomous Transaction Processing (ATP)** para la gestión de bases de datos y **Oracle Container Engine for Kubernetes (OKE)** para la orquestación de contenedores.\n\n**Beneficios Clave:**  \n1. **Escalabilidad y Rendimiento:** ATP proporciona una base de datos autónomos y auto-optimizada, garantizando un alto rendimiento y disponibilidad para las transacciones críticas de Visma.  \n2. **Eficiencia Operativa:** OKE simplifica la implementación y gestión de aplicaciones en contenedores, reduciendo el tiempo de aprovisionamiento y los costos operativos.  \n3. **Seguridad Avanzada:** Ambos servicios ofrecen características de seguridad integradas, como encriptación de datos y control de acceso, alineándose con los estándares de cumplimiento de Visma.  \n4. **Reducción de Costos:** La automatización de ATP y la optimización de recursos en OKE permiten una reducción significativa en los costos de infraestructura y mantenimiento.  \n\n**Resultados Esperados:**  \nVisma podrá ofrecer",
+        "message": "# **Oracle Cloud Infrastructure (OCI) Application Validation Document**  \n**For Client: TGW**  \n\n---\n\n## **1. Document Header**  \n- **ISV**: TechGlobal Solutions Inc.  \n- **Application**: TGW OSS Platform  \n- **Type**: Statement of Work  \n- **Date**: October 15, 2023  \n- **Version**: 1.3  \n- **Confidentiality Disclaimer**: This document contains proprietary information intended solely for the use of TechGlobal Solutions Inc. and Oracle. Unauthorized disclosure or distribution is prohibited.  \n\n---\n\n## **2. Version History Table**  \n\n| **Version** | **Date**       | **Author**          | **Description**                                                                 |  \n|-------------|----------------|---------------------|---------------------------------------------------------------------------------|  \n| 1.0         | Sep 1, 2023    | John Doe            | Initial draft of the validation document.                                       |  \n| 1.1         | Sep 15, 2023   | Jane Smith          | Added OCI architecture diagrams and technical specifications.                   |  \n| 1.2         | Oct 1, 2023    | Alex Johnson        | Incorporated client feedback on validation criteria and scope.                  |  \n| 1.3         | Oct 15, 2023   | John Doe            | Finalized document with implementation plan and sign-off section.               |  \n\n---\n\n## **3. Project Status**  \n- **Current Phase**: Validation  \n- **Next 3 Critical Actions**:  \n  - **Action 1**: Finalize OCI architecture diagram (Owner: Jane Smith)  \n  - **Action 2**: Complete performance testing on VM with GPU (Owner: Alex Johnson)  \n  - **Action 3**: Validate Oracle DB on IaaS migration script (Owner: Sarah Lee)  \n\n---\n\n## **4. Participant Table**  \n\n| **Role**               | **Name**        | **Title**               | **Email**                |  \n|------------------------|-----------------|-------------------------|--------------------------|  \n| **Oracle Solution Architect** | Jane Smith    | Senior Architect       | jane.smith@oracle.com    |  \n| **Oracle Cloud Engineer**     | Alex Johnson   | Cloud Engineer          | alex.johnson@oracle.com  |  \n| **Oracle Project Manager**    | Sarah Lee      | Project Manager         | sarah.lee@oracle.com     |  \n| **TGW Technical Lead**        | John Doe       | Technical Lead          | john.doe@tgw.com         |  \n| **TGW DevOps Engineer**       | Emily White    | DevOps Engineer         | emily.white@tgw.com      |  \n| **TGW Database Admin**        | Michael Brown  | Database Administrator  | michael.brown@tgw.com    |  \n\n---\n\n## **5. Project Summary**  \n**Client Business Overview**:  \nTechGlobal Solutions (TGW) is a leading provider of enterprise software solutions, specializing in microservices-based applications for financial institutions. TGW aims to modernize its infrastructure by migrating to Oracle Cloud Infrastructure (OCI) to improve scalability, performance, and operational efficiency.  \n\n**Application Purpose**:  \nThe TGW OSS Platform consists of approximately 300 microservices, delivering core banking functionalities. The application relies on Kubernetes for container orchestration, PostgreSQL/Oracle DB for data persistence, and Apache Kafka for event streaming.  \n\n**Key Technologies**:  \n- Kubernetes (on-premises and public cloud)  \n- Docker for containerization  \n- Helm for deployment automation  \n- PostgreSQL/Oracle DB  \n- Apache Kafka  \n- S3-compatible object storage  \n\n**OCI Services Being Implemented**:  \n- **Openshift**: Managed Kubernetes service for container orchestration.  \n- **VM with GPU**: High-performance compute instances for AI/ML workloads.  \n- **Oracle DB on IaaS**: Dedicated Oracle Database deployment for mission-critical data.  \n\n---\n\n## **6. Scope Definition**  \n**In-Scope Components**:  \n- Migration of 300 microservices to OCI Openshift.  \n- Deployment of VM with GPU for AI/ML workloads.  \n- Migration of Oracle DB to OCI IaaS.  \n- Integration with Apache Kafka and S3-compatible object storage.  \n- Performance and security validation.  \n\n**Out-of-Scope Items**:  \n- Redesign of existing microservices architecture.  \n- Migration of on-premises network infrastructure.  \n- Third-party software licensing.  \n\n**Validation Boundaries**:  \nValidation will focus on functional compatibility, performance benchmarks, and security compliance within the OCI environment.  \n\n---\n\n## **7. Milestone Timeline**  \n\n| **Milestone**                          | **Date**       | **Status**       | **Dependencies**                                                                 |  \n|----------------------------------------|----------------|------------------|----------------------------------------------------------------------------------|  \n| OCI Architecture Design                | Sep 10, 2023   | Completed        | Client approval                                                                  |  \n| Openshift Cluster Setup                | Sep 25, 2023   | Completed        | OCI networking configuration                                                     |  \n| VM with GPU Deployment                 | Oct 5, 2023    | In Progress      | GPU driver installation                                                          |  \n| Oracle DB on IaaS Migration            | Oct 15, 2023   | Not Started      | Data migration script validation                                                 |  \n| Performance Testing                    | Oct 20, 2023   | Not Started      | Application deployment completion                                                |  \n| Security and Compliance Validation     | Oct 25, 2023   | Not Started      | Performance testing results                                                      |  \n| Final Sign-Off                         | Nov 1, 2023    | Not Started      | All validation criteria met                                                      |  \n\n---\n\n## **8. Validation Criteria**  \n**Technical Metrics Table**:  \n\n| **Metric**              | **Target**          | **Description**                                                                 |  \n|--------------------------|---------------------|---------------------------------------------------------------------------------|  \n| **Latency**             | < 100ms             | End-to-end request latency for critical microservices.                          |  \n| **Throughput**          | 1000 req/sec        | Maximum requests per second handled by the application.                         |  \n| **Availability**        | 99.9%               | Uptime for all services post-migration.                                         |  \n\n**Security Requirements**:  \n- Encryption of data at rest and in transit.  \n- Role-based access control (RBAC) for OCI resources.  \n- Regular vulnerability scanning.  \n\n**Compliance Checks**:  \n- GDPR compliance for data handling.  \n- SOC 2 Type II certification.  \n\n---\n\n## **9. Architecture Sections**  \n**Current Environment**:  \n- **Diagram Description**: On-premises Kubernetes clusters with microservices deployed via Helm. PostgreSQL and Oracle DB instances hosted on-premises. Apache Kafka for event streaming.  \n- **Technology Stack**: Kubernetes, Docker, PostgreSQL, Oracle DB, Apache Kafka, S3-compatible storage.  \n- **Pain Points**:  \n  - Limited scalability due to tightly coupled microservices.  \n  - High operational overhead for infrastructure management.  \n  - Lack of GPU resources for AI/ML workloads.  \n\n**OCI Target Architecture**:  \n- **Services Diagram**:  \n  - Openshift for Kubernetes orchestration.  \n  - VM with GPU for AI/ML workloads.  \n  - Oracle DB on IaaS for database migration.  \n  - Integration with OCI Object Storage and Apache Kafka.  \n- **Component Mapping**:  \n  - Microservices → Openshift Pods.  \n  - PostgreSQL/Oracle DB → Oracle DB on IaaS.  \n  - GPU workloads → VM with GPU.  \n- **Migration Approach**: Lift-and-shift for microservices, followed by database migration and GPU workload deployment.  \n\n---\n\n## **10. Implementation Plan**  \n**Openshift Configuration**:  \n- **Cluster Size**: 3 master nodes, 6 worker nodes.  \n- **Networking**: VPC with public and private subnets.  \n- **Storage**: OCI Block Volumes for persistent storage.  \n\n**VM with GPU Configuration**:  \n- **Instance Type**: BM.GPU3.8 (8 GPUs).  \n- **OS**: Oracle Linux 8.  \n- **Drivers**: NVIDIA GPU drivers pre-installed.  \n\n**Oracle DB on IaaS Configuration**:  \n- **DB Version**: Oracle 19c.  \n- **Storage**: NVMe SSDs for high I/O performance.  \n- **Backup**: Automated backups to OCI Object Storage.  \n\n**Security Settings**:  \n- **Encryption**: AES-256 for data at rest, TLS 1.2 for data in transit.  \n- **Firewall**: OCI Security Lists to restrict inbound/outbound traffic.  \n- **Monitoring**: OCI Monitoring and Logging for real-time insights.  \n\n---\n\n## **11. Sign-off Section**  \n**Client Acceptance Criteria**:  \n- Application functionality validated in OCI environment.  \n- Performance metrics meet or exceed targets.  \n- Security and compliance requirements fulfilled.  \n\n**Oracle Validation Approval**:  \n- Oracle team confirms all validation criteria met.  \n\n**Next Steps Post-Validation**:  \n- Finalize",
         "role": "CHATBOT",
         "tool_calls": null
       }
@@ -26,25 +26,503 @@ Resposta completa de chat_response: {
     "is_search_required": null,
     "prompt": null,
     "search_queries": null,
-    "text": "### **Resumen Ejecutivo: Proyecto \"BlueGarden\" para Visma**\n\n**Objetivo del Proyecto:**  \nEl proyecto \"BlueGarden\" tiene como objetivo modernizar y optimizar la infraestructura de Visma, un líder en soluciones de software empresarial, mediante la adopción de servicios en la nube de Oracle Cloud. El proyecto se centra en mejorar la escalabilidad, seguridad y eficiencia operativa de las aplicaciones críticas de Visma, utilizando **Oracle Autonomous Transaction Processing (ATP)** para la gestión de bases de datos y **Oracle Container Engine for Kubernetes (OKE)** para la orquestación de contenedores.\n\n**Beneficios Clave:**  \n1. **Escalabilidad y Rendimiento:** ATP proporciona una base de datos autónomos y auto-optimizada, garantizando un alto rendimiento y disponibilidad para las transacciones críticas de Visma.  \n2. **Eficiencia Operativa:** OKE simplifica la implementación y gestión de aplicaciones en contenedores, reduciendo el tiempo de aprovisionamiento y los costos operativos.  \n3. **Seguridad Avanzada:** Ambos servicios ofrecen características de seguridad integradas, como encriptación de datos y control de acceso, alineándose con los estándares de cumplimiento de Visma.  \n4. **Reducción de Costos:** La automatización de ATP y la optimización de recursos en OKE permiten una reducción significativa en los costos de infraestructura y mantenimiento.  \n\n**Resultados Esperados:**  \nVisma podrá ofrecer",
+    "text": "# **Oracle Cloud Infrastructure (OCI) Application Validation Document**  \n**For Client: TGW**  \n\n---\n\n## **1. Document Header**  \n- **ISV**: TechGlobal Solutions Inc.  \n- **Application**: TGW OSS Platform  \n- **Type**: Statement of Work  \n- **Date**: October 15, 2023  \n- **Version**: 1.3  \n- **Confidentiality Disclaimer**: This document contains proprietary information intended solely for the use of TechGlobal Solutions Inc. and Oracle. Unauthorized disclosure or distribution is prohibited.  \n\n---\n\n## **2. Version History Table**  \n\n| **Version** | **Date**       | **Author**          | **Description**                                                                 |  \n|-------------|----------------|---------------------|---------------------------------------------------------------------------------|  \n| 1.0         | Sep 1, 2023    | John Doe            | Initial draft of the validation document.                                       |  \n| 1.1         | Sep 15, 2023   | Jane Smith          | Added OCI architecture diagrams and technical specifications.                   |  \n| 1.2         | Oct 1, 2023    | Alex Johnson        | Incorporated client feedback on validation criteria and scope.                  |  \n| 1.3         | Oct 15, 2023   | John Doe            | Finalized document with implementation plan and sign-off section.               |  \n\n---\n\n## **3. Project Status**  \n- **Current Phase**: Validation  \n- **Next 3 Critical Actions**:  \n  - **Action 1**: Finalize OCI architecture diagram (Owner: Jane Smith)  \n  - **Action 2**: Complete performance testing on VM with GPU (Owner: Alex Johnson)  \n  - **Action 3**: Validate Oracle DB on IaaS migration script (Owner: Sarah Lee)  \n\n---\n\n## **4. Participant Table**  \n\n| **Role**               | **Name**        | **Title**               | **Email**                |  \n|------------------------|-----------------|-------------------------|--------------------------|  \n| **Oracle Solution Architect** | Jane Smith    | Senior Architect       | jane.smith@oracle.com    |  \n| **Oracle Cloud Engineer**     | Alex Johnson   | Cloud Engineer          | alex.johnson@oracle.com  |  \n| **Oracle Project Manager**    | Sarah Lee      | Project Manager         | sarah.lee@oracle.com     |  \n| **TGW Technical Lead**        | John Doe       | Technical Lead          | john.doe@tgw.com         |  \n| **TGW DevOps Engineer**       | Emily White    | DevOps Engineer         | emily.white@tgw.com      |  \n| **TGW Database Admin**        | Michael Brown  | Database Administrator  | michael.brown@tgw.com    |  \n\n---\n\n## **5. Project Summary**  \n**Client Business Overview**:  \nTechGlobal Solutions (TGW) is a leading provider of enterprise software solutions, specializing in microservices-based applications for financial institutions. TGW aims to modernize its infrastructure by migrating to Oracle Cloud Infrastructure (OCI) to improve scalability, performance, and operational efficiency.  \n\n**Application Purpose**:  \nThe TGW OSS Platform consists of approximately 300 microservices, delivering core banking functionalities. The application relies on Kubernetes for container orchestration, PostgreSQL/Oracle DB for data persistence, and Apache Kafka for event streaming.  \n\n**Key Technologies**:  \n- Kubernetes (on-premises and public cloud)  \n- Docker for containerization  \n- Helm for deployment automation  \n- PostgreSQL/Oracle DB  \n- Apache Kafka  \n- S3-compatible object storage  \n\n**OCI Services Being Implemented**:  \n- **Openshift**: Managed Kubernetes service for container orchestration.  \n- **VM with GPU**: High-performance compute instances for AI/ML workloads.  \n- **Oracle DB on IaaS**: Dedicated Oracle Database deployment for mission-critical data.  \n\n---\n\n## **6. Scope Definition**  \n**In-Scope Components**:  \n- Migration of 300 microservices to OCI Openshift.  \n- Deployment of VM with GPU for AI/ML workloads.  \n- Migration of Oracle DB to OCI IaaS.  \n- Integration with Apache Kafka and S3-compatible object storage.  \n- Performance and security validation.  \n\n**Out-of-Scope Items**:  \n- Redesign of existing microservices architecture.  \n- Migration of on-premises network infrastructure.  \n- Third-party software licensing.  \n\n**Validation Boundaries**:  \nValidation will focus on functional compatibility, performance benchmarks, and security compliance within the OCI environment.  \n\n---\n\n## **7. Milestone Timeline**  \n\n| **Milestone**                          | **Date**       | **Status**       | **Dependencies**                                                                 |  \n|----------------------------------------|----------------|------------------|----------------------------------------------------------------------------------|  \n| OCI Architecture Design                | Sep 10, 2023   | Completed        | Client approval                                                                  |  \n| Openshift Cluster Setup                | Sep 25, 2023   | Completed        | OCI networking configuration                                                     |  \n| VM with GPU Deployment                 | Oct 5, 2023    | In Progress      | GPU driver installation                                                          |  \n| Oracle DB on IaaS Migration            | Oct 15, 2023   | Not Started      | Data migration script validation                                                 |  \n| Performance Testing                    | Oct 20, 2023   | Not Started      | Application deployment completion                                                |  \n| Security and Compliance Validation     | Oct 25, 2023   | Not Started      | Performance testing results                                                      |  \n| Final Sign-Off                         | Nov 1, 2023    | Not Started      | All validation criteria met                                                      |  \n\n---\n\n## **8. Validation Criteria**  \n**Technical Metrics Table**:  \n\n| **Metric**              | **Target**          | **Description**                                                                 |  \n|--------------------------|---------------------|---------------------------------------------------------------------------------|  \n| **Latency**             | < 100ms             | End-to-end request latency for critical microservices.                          |  \n| **Throughput**          | 1000 req/sec        | Maximum requests per second handled by the application.                         |  \n| **Availability**        | 99.9%               | Uptime for all services post-migration.                                         |  \n\n**Security Requirements**:  \n- Encryption of data at rest and in transit.  \n- Role-based access control (RBAC) for OCI resources.  \n- Regular vulnerability scanning.  \n\n**Compliance Checks**:  \n- GDPR compliance for data handling.  \n- SOC 2 Type II certification.  \n\n---\n\n## **9. Architecture Sections**  \n**Current Environment**:  \n- **Diagram Description**: On-premises Kubernetes clusters with microservices deployed via Helm. PostgreSQL and Oracle DB instances hosted on-premises. Apache Kafka for event streaming.  \n- **Technology Stack**: Kubernetes, Docker, PostgreSQL, Oracle DB, Apache Kafka, S3-compatible storage.  \n- **Pain Points**:  \n  - Limited scalability due to tightly coupled microservices.  \n  - High operational overhead for infrastructure management.  \n  - Lack of GPU resources for AI/ML workloads.  \n\n**OCI Target Architecture**:  \n- **Services Diagram**:  \n  - Openshift for Kubernetes orchestration.  \n  - VM with GPU for AI/ML workloads.  \n  - Oracle DB on IaaS for database migration.  \n  - Integration with OCI Object Storage and Apache Kafka.  \n- **Component Mapping**:  \n  - Microservices → Openshift Pods.  \n  - PostgreSQL/Oracle DB → Oracle DB on IaaS.  \n  - GPU workloads → VM with GPU.  \n- **Migration Approach**: Lift-and-shift for microservices, followed by database migration and GPU workload deployment.  \n\n---\n\n## **10. Implementation Plan**  \n**Openshift Configuration**:  \n- **Cluster Size**: 3 master nodes, 6 worker nodes.  \n- **Networking**: VPC with public and private subnets.  \n- **Storage**: OCI Block Volumes for persistent storage.  \n\n**VM with GPU Configuration**:  \n- **Instance Type**: BM.GPU3.8 (8 GPUs).  \n- **OS**: Oracle Linux 8.  \n- **Drivers**: NVIDIA GPU drivers pre-installed.  \n\n**Oracle DB on IaaS Configuration**:  \n- **DB Version**: Oracle 19c.  \n- **Storage**: NVMe SSDs for high I/O performance.  \n- **Backup**: Automated backups to OCI Object Storage.  \n\n**Security Settings**:  \n- **Encryption**: AES-256 for data at rest, TLS 1.2 for data in transit.  \n- **Firewall**: OCI Security Lists to restrict inbound/outbound traffic.  \n- **Monitoring**: OCI Monitoring and Logging for real-time insights.  \n\n---\n\n## **11. Sign-off Section**  \n**Client Acceptance Criteria**:  \n- Application functionality validated in OCI environment.  \n- Performance metrics meet or exceed targets.  \n- Security and compliance requirements fulfilled.  \n\n**Oracle Validation Approval**:  \n- Oracle team confirms all validation criteria met.  \n\n**Next Steps Post-Validation**:  \n- Finalize",
     "tool_calls": null,
     "usage": {
-      "completion_tokens": 299,
+      "completion_tokens": 1999,
       "completion_tokens_details": null,
-      "prompt_tokens": 36,
+      "prompt_tokens": 776,
       "prompt_tokens_details": null,
-      "total_tokens": 335
+      "total_tokens": 2775
     }
   },
   "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
   "model_version": "1.0"
 }
-INFO:     92.187.130.205:50006 - "POST /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:60374 - "POST /generar HTTP/1.1" 200 OK
 WARNING:  StatReload detected changes in 'generator.py'. Reloading...
 INFO:     Shutting down
 INFO:     Waiting for application shutdown.
 INFO:     Application shutdown complete.
-INFO:     Finished server process [7933]
-INFO:     Started server process [8054]
+INFO:     Finished server process [2703]
+Process SpawnProcess-2:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/labs/sowGenGit/backend/main.py", line 5, in <module>
+    from generator import generar_documento
+  File "/home/ubuntu/labs/sowGenGit/backend/generator.py", line 286
+    prompt = f"""
+IndentationError: unexpected indent
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Started server process [3148]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+INFO:     141.143.193.52:61999 - "OPTIONS /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:61999 - "POST /generar HTTP/1.1" 500 Internal Server Error
+INFO:     141.143.193.52:62398 - "POST /generar HTTP/1.1" 500 Internal Server Error
+INFO:     141.143.193.52:62413 - "POST /generar HTTP/1.1" 500 Internal Server Error
+INFO:     141.143.193.52:62678 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3148]
+INFO:     Started server process [3213]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Resposta completa de chat_response: {
+  "chat_response": {
+    "api_format": "COHERE",
+    "chat_history": [
+      {
+        "message": "Generate a **Statement of Work (SoW)** document for an **Oracle Cloud Infrastructure (OCI) Application Validation** project for client **TGW**, using the following OCI services: **Openshift Cluster, GPU VM, Oracle 19c on IaaS**.\n\nFollow the **exact section structure and technical detail style** as shown in the reference document `Comarch-Telco-OSS-ISV-v0.2`.\n\n---\n\n### 1. Document Header\n- ISV: **[datos['cliente']]**\n- Application: **[datos['proyecto']]**\n- Type: **Statement of Work**\n- Date: **[fecha_actual]**\n- Version: **0.1**\n- Include Oracle's standard **Confidentiality Disclaimer** (as in the original document).\n\n---\n\n### 2. SoW Version History Table\n- 3 to 5 entries simulating evolving versions\n- Table with: **Version #, Date, Revised By, Description of Change**\n\n---\n\n### 3. Status and NEXT STEPS\n- Current project status: *Planning / In Progress / Completed*\n- Next 3 actions required with **Owner, Description**\n\n---\n\n### 4. Project Participants Table\n- Two tables: one for **Oracle**, one for **Client (TGW)**\n- Include: **Name, Role, Email**\n- Keep color-coding format: Tan for Oracle, Green for Client\n\n---\n\n### 5. Project Framework\n- Summarize collaboration mode between Oracle and TGW, including:\n  - Responsibility areas\n  - Feedback loops\n  - Expected validation duration (2-3 weeks)\n\n---\n\n### 6. Required Contribution From Client\n- Clearly list what TGW must provide:\n  - Technical resources\n  - Diagrams or architectural artifacts\n  - Access to dev/test environment\n\n---\n\n### 7. Expected Deliverables From Oracle ISV Labs\n- Standard Oracle outputs:\n  - Terraform modules\n  - Target architecture in OCI\n  - Technical documentation\n  - CI/CD integration examples if relevant\n\n---\n\n### 8. Cloud Environment Used\n- Specify if PoC will run in:\n  - PoC Tenancy\n  - Temporary Test Tenancy\n  - Client tenancy (if already onboarded)\n\n---\n\n### 9. TGW Company Profile\n- Legal Name\n- Country of Operations\n- 2-3 line Company Overview\n- Website link\n\n---\n\n### 10. In-Scope Application: WERX\n- Application Name\n- General Description\n- Key Technologies\n- Current Hosting: On-prem / Public Cloud / Hybrid\n\n---\n\n### 11. Project Overview\n- **Validation Summary**: Successfully validate their application stack in a replicated, containerized environment on OCI that mirrors the customer’s setup. This includes ensuring functional compatibility, performance within latency requirements, and readiness for future automation or cloud-native enhancements—ultimately enabling a smooth lift-and-shift migration path for customer environments\n\nThe infrastructure is based on an on-premise OpenShift environment, with 6 nodes (3 masters, 3 workers) for a lift-and-shift approach. It includes two services outside of OpenShift: OpenUI and an Oracle 19c database (with Data Guard for production). Basic storage is provided to the cluster.\n\nUse a gpu to plc simulation \n- Use bullet points for:\n  - Desired outcome\n  - Scope boundaries\n  - Joint goals\n\n---\n\n### 12. Scope\n- **In-Scope Items**: (e.g., PostgreSQL setup, streaming config, OKE deployment)\n- **Out-of-Scope Items**: (e.g., Production migration, Licensing setup, SLA support)\n- Validation boundaries and limitations\n\n---\n\n### 13. Major Project Milestones\n| Milestone                         | Target Date | Completed | Comments                 |\n|----------------------------------|-------------|-----------|--------------------------|\n| Kickoff with Cloud Architect     | YYYY-MM-DD  |           |                          |\n| OCI Network Setup                | YYYY-MM-DD  |           |                          |\n| Terraform Code Finalization      | YYYY-MM-DD  |           |                          |\n| Application Deployment in OCI    | YYYY-MM-DD  |           |                          |\n| Final Validation & Review        | YYYY-MM-DD  |           |                          |\n\n---\n\n### 14. Acceptance Criteria\n- Table format:\n| Capability/Metric                                | Acceptance Criteria                                                       | Status  |\n|--------------------------------------------------|----------------------------------------------------------------------------|---------|\n| Kubernetes Deployment                            | WERX runs successfully on OCI OKE                 | TBD     |\n| OCI Streaming                                     | Kafka integration tested using OSS workloads                              | TBD     |\n| PostgreSQL                                        | DB deployed, configured, accessible                                       | TBD     |\n| Monitoring                                        | Basic metrics visible in OCI Monitoring dashboard                         | TBD     |\n| Security                                          | IAM + NSG + Encryption in Transit & At Rest                               | TBD     |\n\n---\n\n### 15. Current State Architecture\n- **Diagram Description**: Describe current setup (K8s clusters, Kafka, DB, etc.)\n- **Tech Stack**: Docker, Helm, PostgreSQL, Java, etc.\n- **Known Issues/Pain Points**: e.g., manual deployments, scaling issues\n\n---\n\n### 16. Target OCI Architecture\n- Describe how the following OCI services will be used: Openshift Cluster, GPU VM, Oracle 19c on IaaS\n- Include:\n  - **Service Mapping** table (what maps to what)\n  - **Component Interaction**\n  - **Diagram Placeholder** (describe layout in text)\n\n---\n\n### 17. Implementation Details and Configuration Settings\n- For each service in Openshift Cluster, GPU VM, Oracle 19c on IaaS, include:\n  - Provisioning shape/config\n  - IAM Policies or NSGs applied\n  - Helm/Terraform usage if relevant\n- Highlight:\n  - OKE Node Pools config\n  - PostgreSQL shape, version\n  - Streaming configuration (e.g., brokers, replication, mm2)\n  - Object Storage for backups or Helm registry\n\n---\n\n### 18. Security Considerations\n- IAM Policy examples\n- NSG configuration\n- Data encryption approach\n- Audit logs or Logging Analytics setup\n\n---\n\n### 19. High Availability & Disaster Recovery\n- OKE NodePools across ADs\n- PostgreSQL HA with replica\n- Object Storage cross-region replication\n- DNS failover via Traffic Management\n- DR architecture summary\n\n---\n\n### 20. Closing Feedback\n- Placeholder for feedback from:\n  - Oracle\n  - TGW\n\n---\n\n### 21. Sign-Off Section\n- Client Acceptance\n- Oracle Confirmation\n- Final next steps\n- Version tagging\n\n---\n\n### Technical & Formatting Requirements\n\n1. Use **exact OCI service names**: Openshift Cluster, GPU VM, Oracle 19c on IaaS\n2. Add **3–5 technical specs per service**\n3. Address **security, HA, and scalability**\n4. Format using:\n   - **Markdown syntax**\n   - Tables for specs and milestones\n   - **Bold** key terms\n   - Bullet points for lists\n   - Level 1 and 2 headings consistently\n5. Use current date for generated content\n\n---\n\nGenerate complete, realistic, technically accurate content for each section to build a professional SOW for OCI validation of **WERX** at **TGW**, aligned with Oracle best practices and delivery format.\n",
+        "role": "USER"
+      },
+      {
+        "message": "### 1. Document Header\n\n**ISV:** TGW  \n**Application:** WERX  \n**Type:** Statement of Work  \n**Date:** 2023-10-05  \n**Version:** 0.1  \n\n**Confidentiality Disclaimer:**  \nThis document is the property of Oracle Corporation and is provided for the exclusive use of TGW. It contains confidential and proprietary information and may not be disclosed, reproduced, or distributed without the express written consent of Oracle Corporation.  \n\n---\n\n### 2. SoW Version History  \n\n| **Version #** | **Date**       | **Revised By** | **Description of Change**                     |\n|---------------|----------------|----------------|-----------------------------------------------|\n| 0.1           | 2023-10-05     | John Doe       | Initial draft                                 |\n| 0.2           | 2023-10-10     | Jane Smith     | Added project milestones                      |\n| 0.3           | 2023-10-15     | John Doe       | Updated scope and deliverables                |\n| 0.4           | 2023-10-20     | Jane Smith     | Incorporated client feedback                  |\n| 0.5           | 2023-10-25     | John Doe       | Finalized for sign-off                        |\n\n---\n\n### 3. Status and NEXT STEPS  \n\n**Current Project Status:** Planning  \n\n**Next Steps:**  \n1. **Owner:** Oracle Cloud Architect  \n   **Description:** Finalize OCI architecture diagram and service mapping.  \n2. **Owner:** TGW Technical Lead  \n   **Description:** Provide access to the dev/test environment and share architectural artifacts.  \n3. **Owner:** Oracle Project Manager  \n   **Description:** Schedule kickoff meeting with all stakeholders.  \n\n---\n\n### 4. Project Participants  \n\n**Oracle Team**  \n| **Name**          | **Role**            | **Email**                     |\n|--------------------|---------------------|-------------------------------|\n| John Doe           | Cloud Architect     | john.doe@oracle.com           |\n| Jane Smith         | Project Manager     | jane.smith@oracle.com         |\n| Alex Brown         | DevOps Engineer     | alex.brown@oracle.com         |\n\n**TGW Team**  \n| **Name**          | **Role**            | **Email**                     |\n|--------------------|---------------------|-------------------------------|\n| Emily Johnson      | Technical Lead      | emily.johnson@tgw.com         |\n| Michael Williams   | Solution Architect  | michael.williams@tgw.com      |\n| Sarah Green        | Operations Manager  | sarah.green@tgw.com           |\n\n---\n\n### 5. Project Framework  \n\nThe project will be executed in a collaborative mode between Oracle and TGW, with the following responsibilities:  \n- **Oracle:** Provide OCI expertise, design target architecture, and deploy necessary resources.  \n- **TGW:** Provide application-specific knowledge, access to the current environment, and validate functionality.  \n\n**Feedback Loops:** Weekly sync meetings will be held to review progress and address any blockers.  \n**Expected Validation Duration:** 2-3 weeks.  \n\n---\n\n### 6. Required Contribution From Client  \n\n- **Technical Resources:** Access to the current on-premise OpenShift environment and Oracle 19c database.  \n- **Architectural Artifacts:** Diagrams of the current setup, including network topology and application flow.  \n- **Environment Access:** Credentials for the dev/test environment for Oracle to replicate the setup in OCI.  \n\n---\n\n### 7. Expected Deliverables From Oracle ISV Labs  \n\n- **Terraform Modules:** For provisioning OCI resources (OpenShift Cluster, GPU VM, Oracle 19c on IaaS).  \n- **Target Architecture:** Detailed diagram and documentation of the OCI environment.  \n- **Technical Documentation:** Setup guides, troubleshooting steps, and best practices.  \n- **CI/CD Integration Examples:** Sample pipelines for deploying WERX on OCI.  \n\n---\n\n### 8. Cloud Environment Used  \n\n**PoC Tenancy:** A temporary Oracle-managed tenancy will be used for the validation.  \n\n---\n\n### 9. TGW Company Profile  \n\n**Legal Name:** TGW Logistics Group  \n**Country of Operations:** Global, headquartered in Austria  \n**Company Overview:** TGW is a leading provider of automated warehouse solutions, specializing in intralogistics.  \n**Website:** [www.tgw-logistics.com](https://www.tgw-logistics.com)  \n\n---\n\n### 10. In-Scope Application: WERX  \n\n**Application Name:** WERX  \n**General Description:** A warehouse execution system (WES) that orchestrates material flow and order fulfillment.  \n**Key Technologies:** Java, Docker, Kubernetes, Oracle 19c, Kafka.  \n**Current Hosting:** On-premise OpenShift environment with 6 nodes (3 masters, 3 workers).  \n\n---\n\n### 11. Project Overview  \n\n**Validation Summary:** Successfully validate WERX in a replicated, containerized environment on OCI, ensuring functional compatibility, performance within latency requirements, and readiness for future automation or cloud-native enhancements.  \n\n**Desired Outcome:**  \n- Seamless lift-and-shift migration path for WERX to OCI.  \n- Validation of GPU-based PLC simulation for real-time processing.  \n- Integration of Oracle 19c with Data Guard for high availability.  \n\n**Scope Boundaries:**  \n- Focus on OCI services: OpenShift Cluster, GPU VM, Oracle 19c on IaaS.  \n- Excludes production migration and licensing setup.  \n\n**Joint Goals:**  \n- Optimize application performance in OCI.  \n- Ensure security and compliance with TGW policies.  \n- Provide a scalable architecture for future growth.  \n\n---\n\n### 12. Scope  \n\n**In-Scope Items:**  \n- OpenShift Cluster deployment with 6 nodes (3 masters, 3 workers).  \n- GPU VM setup for PLC simulation.  \n- Oracle 19c database deployment with Data Guard.  \n- Integration of OpenUI service outside OpenShift.  \n\n**Out-of-Scope Items:**  \n- Production migration.  \n- Licensing setup for Oracle 19c.  \n- SLA support post-validation.  \n\n**Validation Boundaries:**  \n- Functional testing of WERX in OCI.  \n- Performance testing within latency requirements.  \n\n---\n\n### 13. Major Project Milestones  \n\n| **Milestone**                         | **Target Date** | **Completed** | **Comments**                 |\n|---------------------------------------|-----------------|---------------|------------------------------|\n| Kickoff with Cloud Architect          | 2023-10-10      |               |                              |\n| OCI Network Setup                     | 2023-10-15      |               |                              |\n| Terraform Code Finalization           | 2023-10-20      |               |                              |\n| Application Deployment in OCI         | 2023-10-23      |               |                              |\n| Final Validation & Review             | 2023-10-27      |               |                              |\n\n---\n\n### 14. Acceptance Criteria  \n\n| **Capability/Metric**                | **Acceptance Criteria**                                                       | **Status** |\n|--------------------------------------|-------------------------------------------------------------------------------|------------|\n| OpenShift Cluster Deployment         | WERX runs successfully on OCI OpenShift Cluster                               | TBD        |\n| GPU VM Setup                         | PLC simulation processes data within latency requirements                     | TBD        |\n| Oracle 19c on IaaS                   | Database deployed, configured, and accessible with Data Guard enabled         | TBD        |\n| OpenUI Integration                   | OpenUI service communicates seamlessly with OpenShift Cluster                 | TBD        |\n| Security                             | IAM policies, NSGs, and encryption applied as per TGW standards               | TBD        |\n\n---\n\n### 15. Current State Architecture  \n\n**Diagram Description:**  \n- On-premise OpenShift environment with 6 nodes (3 masters, 3 workers).  \n- Oracle 19c database with Data Guard for production.  \n- OpenUI service running outside OpenShift.  \n\n**Tech Stack:**  \n- Docker, Helm, Java, Kafka, Oracle 19c.  \n\n**Known Issues/Pain Points:**  \n- Manual deployments leading to longer release cycles.  \n- Limited scalability of the on-premise infrastructure.  \n\n---\n\n### 16. Target OCI Architecture  \n\n**Service Mapping:**  \n\n| **Current Component** | **OCI Service**                  |\n|------------------------|-------------------------------|\n| OpenShift Cluster      | OCI OpenShift Cluster         |\n| GPU for PLC Simulation | GPU VM                        |\n| Oracle 19c Database    | Oracle 19c on IaaS            |\n| OpenUI                 | Compute Instance              |\n\n**Component Interaction:**  \n- OpenShift Cluster hosts WERX microservices.  \n- GPU VM processes real-time data for PLC simulation.  \n- Oracle 19c on I",
+        "role": "CHATBOT",
+        "tool_calls": null
+      }
+    ],
+    "citations": null,
+    "documents": null,
+    "error_message": null,
+    "finish_reason": "MAX_TOKENS",
+    "is_search_required": null,
+    "prompt": null,
+    "search_queries": null,
+    "text": "### 1. Document Header\n\n**ISV:** TGW  \n**Application:** WERX  \n**Type:** Statement of Work  \n**Date:** 2023-10-05  \n**Version:** 0.1  \n\n**Confidentiality Disclaimer:**  \nThis document is the property of Oracle Corporation and is provided for the exclusive use of TGW. It contains confidential and proprietary information and may not be disclosed, reproduced, or distributed without the express written consent of Oracle Corporation.  \n\n---\n\n### 2. SoW Version History  \n\n| **Version #** | **Date**       | **Revised By** | **Description of Change**                     |\n|---------------|----------------|----------------|-----------------------------------------------|\n| 0.1           | 2023-10-05     | John Doe       | Initial draft                                 |\n| 0.2           | 2023-10-10     | Jane Smith     | Added project milestones                      |\n| 0.3           | 2023-10-15     | John Doe       | Updated scope and deliverables                |\n| 0.4           | 2023-10-20     | Jane Smith     | Incorporated client feedback                  |\n| 0.5           | 2023-10-25     | John Doe       | Finalized for sign-off                        |\n\n---\n\n### 3. Status and NEXT STEPS  \n\n**Current Project Status:** Planning  \n\n**Next Steps:**  \n1. **Owner:** Oracle Cloud Architect  \n   **Description:** Finalize OCI architecture diagram and service mapping.  \n2. **Owner:** TGW Technical Lead  \n   **Description:** Provide access to the dev/test environment and share architectural artifacts.  \n3. **Owner:** Oracle Project Manager  \n   **Description:** Schedule kickoff meeting with all stakeholders.  \n\n---\n\n### 4. Project Participants  \n\n**Oracle Team**  \n| **Name**          | **Role**            | **Email**                     |\n|--------------------|---------------------|-------------------------------|\n| John Doe           | Cloud Architect     | john.doe@oracle.com           |\n| Jane Smith         | Project Manager     | jane.smith@oracle.com         |\n| Alex Brown         | DevOps Engineer     | alex.brown@oracle.com         |\n\n**TGW Team**  \n| **Name**          | **Role**            | **Email**                     |\n|--------------------|---------------------|-------------------------------|\n| Emily Johnson      | Technical Lead      | emily.johnson@tgw.com         |\n| Michael Williams   | Solution Architect  | michael.williams@tgw.com      |\n| Sarah Green        | Operations Manager  | sarah.green@tgw.com           |\n\n---\n\n### 5. Project Framework  \n\nThe project will be executed in a collaborative mode between Oracle and TGW, with the following responsibilities:  \n- **Oracle:** Provide OCI expertise, design target architecture, and deploy necessary resources.  \n- **TGW:** Provide application-specific knowledge, access to the current environment, and validate functionality.  \n\n**Feedback Loops:** Weekly sync meetings will be held to review progress and address any blockers.  \n**Expected Validation Duration:** 2-3 weeks.  \n\n---\n\n### 6. Required Contribution From Client  \n\n- **Technical Resources:** Access to the current on-premise OpenShift environment and Oracle 19c database.  \n- **Architectural Artifacts:** Diagrams of the current setup, including network topology and application flow.  \n- **Environment Access:** Credentials for the dev/test environment for Oracle to replicate the setup in OCI.  \n\n---\n\n### 7. Expected Deliverables From Oracle ISV Labs  \n\n- **Terraform Modules:** For provisioning OCI resources (OpenShift Cluster, GPU VM, Oracle 19c on IaaS).  \n- **Target Architecture:** Detailed diagram and documentation of the OCI environment.  \n- **Technical Documentation:** Setup guides, troubleshooting steps, and best practices.  \n- **CI/CD Integration Examples:** Sample pipelines for deploying WERX on OCI.  \n\n---\n\n### 8. Cloud Environment Used  \n\n**PoC Tenancy:** A temporary Oracle-managed tenancy will be used for the validation.  \n\n---\n\n### 9. TGW Company Profile  \n\n**Legal Name:** TGW Logistics Group  \n**Country of Operations:** Global, headquartered in Austria  \n**Company Overview:** TGW is a leading provider of automated warehouse solutions, specializing in intralogistics.  \n**Website:** [www.tgw-logistics.com](https://www.tgw-logistics.com)  \n\n---\n\n### 10. In-Scope Application: WERX  \n\n**Application Name:** WERX  \n**General Description:** A warehouse execution system (WES) that orchestrates material flow and order fulfillment.  \n**Key Technologies:** Java, Docker, Kubernetes, Oracle 19c, Kafka.  \n**Current Hosting:** On-premise OpenShift environment with 6 nodes (3 masters, 3 workers).  \n\n---\n\n### 11. Project Overview  \n\n**Validation Summary:** Successfully validate WERX in a replicated, containerized environment on OCI, ensuring functional compatibility, performance within latency requirements, and readiness for future automation or cloud-native enhancements.  \n\n**Desired Outcome:**  \n- Seamless lift-and-shift migration path for WERX to OCI.  \n- Validation of GPU-based PLC simulation for real-time processing.  \n- Integration of Oracle 19c with Data Guard for high availability.  \n\n**Scope Boundaries:**  \n- Focus on OCI services: OpenShift Cluster, GPU VM, Oracle 19c on IaaS.  \n- Excludes production migration and licensing setup.  \n\n**Joint Goals:**  \n- Optimize application performance in OCI.  \n- Ensure security and compliance with TGW policies.  \n- Provide a scalable architecture for future growth.  \n\n---\n\n### 12. Scope  \n\n**In-Scope Items:**  \n- OpenShift Cluster deployment with 6 nodes (3 masters, 3 workers).  \n- GPU VM setup for PLC simulation.  \n- Oracle 19c database deployment with Data Guard.  \n- Integration of OpenUI service outside OpenShift.  \n\n**Out-of-Scope Items:**  \n- Production migration.  \n- Licensing setup for Oracle 19c.  \n- SLA support post-validation.  \n\n**Validation Boundaries:**  \n- Functional testing of WERX in OCI.  \n- Performance testing within latency requirements.  \n\n---\n\n### 13. Major Project Milestones  \n\n| **Milestone**                         | **Target Date** | **Completed** | **Comments**                 |\n|---------------------------------------|-----------------|---------------|------------------------------|\n| Kickoff with Cloud Architect          | 2023-10-10      |               |                              |\n| OCI Network Setup                     | 2023-10-15      |               |                              |\n| Terraform Code Finalization           | 2023-10-20      |               |                              |\n| Application Deployment in OCI         | 2023-10-23      |               |                              |\n| Final Validation & Review             | 2023-10-27      |               |                              |\n\n---\n\n### 14. Acceptance Criteria  \n\n| **Capability/Metric**                | **Acceptance Criteria**                                                       | **Status** |\n|--------------------------------------|-------------------------------------------------------------------------------|------------|\n| OpenShift Cluster Deployment         | WERX runs successfully on OCI OpenShift Cluster                               | TBD        |\n| GPU VM Setup                         | PLC simulation processes data within latency requirements                     | TBD        |\n| Oracle 19c on IaaS                   | Database deployed, configured, and accessible with Data Guard enabled         | TBD        |\n| OpenUI Integration                   | OpenUI service communicates seamlessly with OpenShift Cluster                 | TBD        |\n| Security                             | IAM policies, NSGs, and encryption applied as per TGW standards               | TBD        |\n\n---\n\n### 15. Current State Architecture  \n\n**Diagram Description:**  \n- On-premise OpenShift environment with 6 nodes (3 masters, 3 workers).  \n- Oracle 19c database with Data Guard for production.  \n- OpenUI service running outside OpenShift.  \n\n**Tech Stack:**  \n- Docker, Helm, Java, Kafka, Oracle 19c.  \n\n**Known Issues/Pain Points:**  \n- Manual deployments leading to longer release cycles.  \n- Limited scalability of the on-premise infrastructure.  \n\n---\n\n### 16. Target OCI Architecture  \n\n**Service Mapping:**  \n\n| **Current Component** | **OCI Service**                  |\n|------------------------|-------------------------------|\n| OpenShift Cluster      | OCI OpenShift Cluster         |\n| GPU for PLC Simulation | GPU VM                        |\n| Oracle 19c Database    | Oracle 19c on IaaS            |\n| OpenUI                 | Compute Instance              |\n\n**Component Interaction:**  \n- OpenShift Cluster hosts WERX microservices.  \n- GPU VM processes real-time data for PLC simulation.  \n- Oracle 19c on I",
+    "tool_calls": null,
+    "usage": {
+      "completion_tokens": 1999,
+      "completion_tokens_details": null,
+      "prompt_tokens": 1616,
+      "prompt_tokens_details": null,
+      "total_tokens": 3615
+    }
+  },
+  "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceyaaypm2hg4db3evqkmjfdli5mggcxrhp2i4qmhvggyb4ja",
+  "model_version": "1.0"
+}
+INFO:     141.143.193.52:63315 - "POST /generar HTTP/1.1" 200 OK
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3213]
+Process SpawnProcess-5:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/labs/sowGenGit/backend/main.py", line 5, in <module>
+    from generator import generar_documento
+  File "/home/ubuntu/labs/sowGenGit/backend/generator.py", line 121
+    def generar_documento(datos):
+IndentationError: expected an indented block after 'except' statement on line 119
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Started server process [3276]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:65054 - "OPTIONS /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:65054 - "POST /generar HTTP/1.1" 500 Internal Server Error
+INFO:     141.143.193.52:65054 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3276]
+INFO:     Started server process [3283]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:49332 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3283]
+INFO:     Started server process [3299]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:50235 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3299]
+INFO:     Started server process [3319]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:50578 - "OPTIONS /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:50578 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3319]
+INFO:     Started server process [3322]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:50769 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3322]
+INFO:     Started server process [3331]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:51350 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3331]
+INFO:     Started server process [3344]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:51457 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3344]
+INFO:     Started server process [3356]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:51788 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3356]
+Process SpawnProcess-14:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/labs/sowGenGit/backend/main.py", line 5, in <module>
+    from generator import generar_documento
+ImportError: cannot import name 'generar_documento' from 'generator' (/home/ubuntu/labs/sowGenGit/backend/generator.py)
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Started server process [3530]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:52928 - "OPTIONS /generar HTTP/1.1" 200 OK
+❌ Error during LLaMA chat generation: {'target_service': 'generative_ai_inference', 'status': 400, 'code': '400', 'opc-request-id': '606f69bd-faaa-4905-b1ba-49d54bb9/1CD4B5B4CD115C304EF91F7E154749E5/D96B788D783938B48D210E7394912957', 'message': 'top_k must be -1 (disable), or at least 1, got 0.', 'operation_name': 'chat', 'timestamp': '2025-07-07T08:03:12.086591+00:00', 'client_version': 'Oracle-PythonSDK/2.155.0', 'request_endpoint': 'POST https://inference.generativeai.eu-frankfurt-1.oci.oraclecloud.com/20231130/actions/chat', 'logging_tips': 'To get more info on the failing request, refer to https://docs.oracle.com/en-us/iaas/tools/python/latest/logging.html for ways to log the request/response details.', 'troubleshooting_tips': "See https://docs.oracle.com/iaas/Content/API/References/apierrors.htm#apierrors_400__400_400 for more information about resolving this error. Also see https://docs.oracle.com/iaas/api/#/en/generative-ai-inference/20231130/ChatResult/Chat for details on this operation's requirements. If you are unable to resolve this generative_ai_inference issue, please contact Oracle support and provide them this full error message."}
+INFO:     141.143.193.52:52928 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3530]
+INFO:     Started server process [3538]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+❌ Error during LLaMA chat generation: 'GenericChatResponse' object has no attribute 'text'
+INFO:     141.143.193.52:53209 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3538]
+INFO:     Started server process [3557]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+❌ Error during LLaMA chat generation: name 'i' is not defined
+INFO:     141.143.193.52:53605 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3557]
+INFO:     Started server process [3560]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+❌ Error during LLaMA chat generation: 'GenericChatResponse' object has no attribute 'message'
+INFO:     141.143.193.52:53856 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3560]
+INFO:     Started server process [3569]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+**************************Chat Result**************************
+<oci.response.Response object at 0x79335f50f370>
+INFO:     141.143.193.52:54301 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3569]
+Process SpawnProcess-20:
+Traceback (most recent call last):
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.10/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/_subprocess.py", line 80, in subprocess_started
+    target(sockets=sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 67, in run
+    return asyncio.run(self.serve(sockets=sockets))
+  File "/usr/lib/python3.10/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
+    return future.result()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 71, in serve
+    await self._serve(sockets)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/server.py", line 78, in _serve
+    config.load()
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/config.py", line 436, in load
+    self.loaded_app = import_from_string(self.app)
+  File "/home/ubuntu/labs/sowGenGit/backend/venv/lib/python3.10/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/usr/lib/python3.10/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1050, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/home/ubuntu/labs/sowGenGit/backend/main.py", line 5, in <module>
+    from generator import generar_documento
+  File "/home/ubuntu/labs/sowGenGit/backend/generator.py", line 128
+    //print(response)
+    ^^
+SyntaxError: invalid syntax
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Started server process [3600]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:55265 - "OPTIONS /generar HTTP/1.1" 200 OK
+**************************Chat Result**************************
+❌ Error during LLaMA chat generation: 'GenericChatResponse' object has no attribute 'text'
+INFO:     141.143.193.52:55265 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3600]
+INFO:     Started server process [3615]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+**************************Chat Result**************************
+❌ Error during LLaMA chat generation: 'GenericChatResponse' object has no attribute 'message'
+INFO:     141.143.193.52:55760 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3615]
+INFO:     Started server process [3623]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+<oci.response.Response object at 0x7ea4c4913370>
+{
+  "chat_response": {
+    "api_format": "GENERIC",
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": {
+          "text_offset": null,
+          "token_logprobs": null,
+          "tokens": null,
+          "top_logprobs": null
+        },
+        "message": {
+          "content": [
+            {
+              "text": "### 1. Document Header\n- ISV: **TGW**\n- Application: **WERX**\n- Type: **Statement of Work**\n- Date: **2024-09-16**\n- Version: **0.1**\n- Include Oracle's standard **Confidentiality Disclaimer**: \nThis document contains confidential information and is protected by copyright law. It is intended only for the use of the individual or entity to which it is addressed and may not be reproduced or distributed without the prior written permission of Oracle.\n\n---\n\n### 2. SoW Version History Table\n| Version # | Date       | Revised By | Description of Change                                             |\n|-----------|------------|------------|-----------------------------------------------------------------|\n| 0.1       | 2024-09-10 | John Doe   | Initial draft                                                    |\n| 0.2       | 2024-09-12 | Jane Smith | Added technical specifications for OCI services                  |\n| 0.3       | 2024-09-14 | John Doe   | Included security considerations and high availability details   |\n| 0.4       | 2024-09-15 | Jane Smith | Updated implementation details and configuration settings         |\n| 0.5       | 2024-09-16 | John Doe   | Finalized document with all necessary details and sign-off section|\n\n---\n\n### 3. Status and NEXT STEPS\n- Current project status: *In Progress*\n- Next 3 actions required with **Owner, Description**:\n  1. **Owner**: Oracle Cloud Architect, **Description**: Finalize OCI network setup and Terraform code.\n  2. **Owner**: TGW Technical Lead, **Description**: Provide access to dev/test environment and necessary technical resources.\n  3. **Owner**: Oracle ISV Labs, **Description**: Deploy WERX application in OCI and perform initial validation tests.\n\n---\n\n### 4. Project Participants Table\n#### Oracle Participants\n| Name       | Role                | Email              |\n|------------|---------------------|--------------------|\n| John Doe   | Cloud Architect     | <johndoe@oracle.com> |\n| Jane Smith | ISV Labs Engineer   | <janesmith@oracle.com> |\n\n#### Client (TGW) Participants\n| Name       | Role                | Email              |\n|------------|---------------------|--------------------|\n| Mike Brown | Technical Lead      | <mikebrown@tgw.com>  |\n| Emma Taylor| DevOps Engineer     | <emmataylor@tgw.com> |\n\n---\n\n### 5. Project Framework\nThe collaboration mode between Oracle and TGW will involve regular feedback loops, with Oracle responsible for the technical implementation and validation of WERX on OCI, and TGW providing the necessary technical resources and access to their dev/test environment. The expected validation duration is approximately 2-3 weeks.\n\n---\n\n### 6. Required Contribution From Client\nTGW must provide:\n- Technical resources, including personnel with expertise in WERX and its underlying technologies.\n- Diagrams or architectural artifacts of the current WERX setup.\n- Access to the dev/test environment for Oracle to perform the validation.\n\n---\n\n### 7. Expected Deliverables From Oracle ISV Labs\nOracle expects to deliver:\n- Terraform modules for automating the deployment of WERX on OCI.\n- A target architecture in OCI that mirrors the customer’s setup.\n- Technical documentation detailing the implementation and configuration settings.\n- Examples of CI/CD integration using OCI services.\n\n---\n\n### 8. Cloud Environment Used\nThe Proof of Concept (PoC) will run in a temporary test tenancy provisioned by Oracle for the duration of the validation project.\n\n---\n\n### 9. TGW Company Profile\n- Legal Name: TGW Inc.\n- Country of Operations: USA\n- Company Overview: TGW is a leading provider of logistics and material handling solutions, leveraging technology to enhance supply chain efficiency.\n- Website link: [www.tgw.com](http://www.tgw.com)\n\n---\n\n### 10. In-Scope Application: WERX\n- Application Name: WERX\n- General Description: WERX is a logistics management platform designed to optimize warehouse operations and supply chain visibility.\n- Key Technologies: Java, PostgreSQL, Docker, Kubernetes.\n- Current Hosting: On-premises data center.\n\n---\n\n### 11. Project Overview\n**Validation Summary**: The goal is to successfully validate WERX on Oracle Cloud Infrastructure (OCI), ensuring functional compatibility, performance, and readiness for future cloud-native enhancements. This involves replicating the on-premise OpenShift environment, including a 6-node cluster (3 masters, 3 workers), and integrating with external services like OpenUI and an Oracle 19c database.\n- Desired outcome:\n  - Validate WERX on OCI with Openshift Cluster, GPU VM, and Oracle 19c on IaaS.\n  - Achieve performance within specified latency requirements.\n- Scope boundaries:\n  - Focus on the technical validation of WERX on OCI.\n  - Exclude production migration and licensing setup.\n- Joint goals:\n  - Ensure a smooth lift-and-shift migration path for WERX.\n  - Explore opportunities for cloud-native enhancements.\n\n---\n\n### 12. Scope\n**In-Scope Items**:\n- Deployment of Openshift Cluster on OCI.\n- Configuration of GPU VM for simulation workloads.\n- Setup of Oracle 19c on IaaS with Data Guard for production environments.\n- Integration of WERX with OpenUI and the Oracle 19c database.\n**Out-of-Scope Items**:\n- Production migration of WERX to OCI.\n- Licensing setup for Oracle products.\n- SLA support for the production environment.\nValidation boundaries and limitations will be defined based on the current WERX architecture and the OCI services utilized.\n\n---\n\n### 13. Major Project Milestones\n| Milestone                         | Target Date | Completed | Comments                 |\n|----------------------------------|-------------|-----------|--------------------------|\n| Kickoff with Cloud Architect     | 2024-09-10  |           |                          |\n| OCI Network Setup                | 2024-09-14  |           |                          |\n| Terraform Code Finalization      | 2024-09-17  |           |                          |\n| Application Deployment in OCI    | 2024-09-21  |           |                          |\n| Final Validation & Review        | 2024-09-28  |           |                          |\n\n---\n\n### 14. Acceptance Criteria\n| Capability/Metric                                | Acceptance Criteria                                                       | Status  |\n|--------------------------------------------------|----------------------------------------------------------------------------|---------|\n| Kubernetes Deployment                            | WERX runs successfully on OCI OKE                 | TBD     |\n| OCI Streaming                                     | Kafka integration tested using OSS workloads                              | TBD     |\n| PostgreSQL                                        | DB deployed, configured, accessible                                       | TBD     |\n| Monitoring                                        | Basic metrics visible in OCI Monitoring dashboard                         | TBD     |\n| Security                                          | IAM + NSG + Encryption in Transit & At Rest                               | TBD     |\n\n---\n\n### 15. Current State Architecture\n**Diagram Description**: The current architecture consists of an on-premise OpenShift environment with 6 nodes, integrated with OpenUI and an Oracle 19c database. Docker and Helm are used for containerization and orchestration.\n**Tech Stack**: Docker, Helm, PostgreSQL, Java, OpenShift.\n**Known Issues/Pain Points**: Manual deployments, scaling issues, and limited visibility into performance metrics.\n\n---\n\n### 16. Target OCI Architecture\nThe target architecture will utilize the following OCI services:\n- **Openshift Cluster**: For deploying and managing WERX.\n- **GPU VM**: For simulation workloads, enhancing performance and efficiency.\n- **Oracle 19c on IaaS**: As the database solution, with Data Guard for production environments.\n**Service Mapping**:\n| Current Service | OCI Service      |\n|-----------------|------------------|\n| OpenShift       | Openshift Cluster|\n| Database        | Oracle 19c on IaaS|\n**Component Interaction**: WERX will interact with OpenUI and the Oracle 19c database through REST APIs and JDBC connections, respectively.\n**Diagram Placeholder**: A high-level architecture diagram will be provided, showing the integration of WERX with OCI services.\n\n---\n\n### 17. Implementation Details and Configuration Settings\n- **Openshift Cluster**: Provisioned with 6 nodes (3 masters, 3 workers), using the Oracle Cloud Infrastructure Console.\n- **GPU VM**: Configured for simulation workloads, with a shape that includes NVIDIA GPUs.\n- **Oracle 19c on IaaS**: Deployed with Data Guard for production environments, using Terraform for automation.\n- **OKE Node Pools**: Configured for high availability across multiple Availability Domains (ADs).\n- **PostgreSQL**: Utilized for storing application data, with a shape that ensures high performance and low latency.\n- **Streaming Configuration**: Kafka brokers will be configured for streaming data, with replication and mirroring for high availability.\n\n---\n\n### 18. Security Considerations\n- **IAM Policy**: Policies will be created to restrict access to resources, following the principle of least privilege.\n- **NSG Configuration**: Network Security Groups (NSGs) will be used to control traffic flow and ensure network isolation.\n- **Data Encryption**: Data at rest and in transit will be encrypted using OCI's encryption services.\n- **Audit Logs**: Logging Analytics will be configured to monitor and analyze audit logs for security incidents.\n\n---\n\n### 19. High Availability & Disaster Recovery\n- **OKE NodePools**: Spread across multiple ADs for high availability.\n- **PostgreSQL HA**: Configured with a replica for high availability and data protection.\n- **Object Storage**: Used for backups, with cross-region replication for disaster recovery.\n- **DNS Failover**: Traffic Management will be used for DNS failover in case of regional outages.\n- **DR Architecture**: A summary of the disaster recovery architecture will be provided, detailing the steps for recovery in case of a disaster.\n\n---\n\n### 20. Closing Feedback\n- **Oracle**: Feedback on the validation process and outcomes.\n- **TGW**: Feedback on the effectiveness of the validation in meeting their requirements and expectations.\n\n---\n\n### 21. Sign-Off Section\n- **Client Acceptance**: TGW acknowledges that the validation has met their requirements and expectations.\n- **Oracle Confirmation**: Oracle confirms that the validation has been successfully completed and that WERX is compatible with OCI.\n- **Final Next Steps**: Outline the next steps, including production migration and ongoing support.\n- **Version Tagging**: This document will be version-controlled, with changes tracked and approved by both parties.",
+              "type": "TEXT"
+            }
+          ],
+          "name": null,
+          "role": "ASSISTANT",
+          "tool_calls": []
+        }
+      }
+    ],
+    "time_created": "2025-07-07T08:24:31.537000+00:00"
+  },
+  "model_id": "ocid1.generativeaimodel.oc1.eu-frankfurt-1.amaaaaaask7dceya4tdabclcsqbc3yj2mozvvqoq5ccmliv3354hfu3mx6bq",
+  "model_version": "1.0.0"
+}
+{
+  "api_format": "GENERIC",
+  "choices": [
+    {
+      "finish_reason": "stop",
+      "index": 0,
+      "logprobs": {
+        "text_offset": null,
+        "token_logprobs": null,
+        "tokens": null,
+        "top_logprobs": null
+      },
+      "message": {
+        "content": [
+          {
+            "text": "### 1. Document Header\n- ISV: **TGW**\n- Application: **WERX**\n- Type: **Statement of Work**\n- Date: **2024-09-16**\n- Version: **0.1**\n- Include Oracle's standard **Confidentiality Disclaimer**: \nThis document contains confidential information and is protected by copyright law. It is intended only for the use of the individual or entity to which it is addressed and may not be reproduced or distributed without the prior written permission of Oracle.\n\n---\n\n### 2. SoW Version History Table\n| Version # | Date       | Revised By | Description of Change                                             |\n|-----------|------------|------------|-----------------------------------------------------------------|\n| 0.1       | 2024-09-10 | John Doe   | Initial draft                                                    |\n| 0.2       | 2024-09-12 | Jane Smith | Added technical specifications for OCI services                  |\n| 0.3       | 2024-09-14 | John Doe   | Included security considerations and high availability details   |\n| 0.4       | 2024-09-15 | Jane Smith | Updated implementation details and configuration settings         |\n| 0.5       | 2024-09-16 | John Doe   | Finalized document with all necessary details and sign-off section|\n\n---\n\n### 3. Status and NEXT STEPS\n- Current project status: *In Progress*\n- Next 3 actions required with **Owner, Description**:\n  1. **Owner**: Oracle Cloud Architect, **Description**: Finalize OCI network setup and Terraform code.\n  2. **Owner**: TGW Technical Lead, **Description**: Provide access to dev/test environment and necessary technical resources.\n  3. **Owner**: Oracle ISV Labs, **Description**: Deploy WERX application in OCI and perform initial validation tests.\n\n---\n\n### 4. Project Participants Table\n#### Oracle Participants\n| Name       | Role                | Email              |\n|------------|---------------------|--------------------|\n| John Doe   | Cloud Architect     | <johndoe@oracle.com> |\n| Jane Smith | ISV Labs Engineer   | <janesmith@oracle.com> |\n\n#### Client (TGW) Participants\n| Name       | Role                | Email              |\n|------------|---------------------|--------------------|\n| Mike Brown | Technical Lead      | <mikebrown@tgw.com>  |\n| Emma Taylor| DevOps Engineer     | <emmataylor@tgw.com> |\n\n---\n\n### 5. Project Framework\nThe collaboration mode between Oracle and TGW will involve regular feedback loops, with Oracle responsible for the technical implementation and validation of WERX on OCI, and TGW providing the necessary technical resources and access to their dev/test environment. The expected validation duration is approximately 2-3 weeks.\n\n---\n\n### 6. Required Contribution From Client\nTGW must provide:\n- Technical resources, including personnel with expertise in WERX and its underlying technologies.\n- Diagrams or architectural artifacts of the current WERX setup.\n- Access to the dev/test environment for Oracle to perform the validation.\n\n---\n\n### 7. Expected Deliverables From Oracle ISV Labs\nOracle expects to deliver:\n- Terraform modules for automating the deployment of WERX on OCI.\n- A target architecture in OCI that mirrors the customer’s setup.\n- Technical documentation detailing the implementation and configuration settings.\n- Examples of CI/CD integration using OCI services.\n\n---\n\n### 8. Cloud Environment Used\nThe Proof of Concept (PoC) will run in a temporary test tenancy provisioned by Oracle for the duration of the validation project.\n\n---\n\n### 9. TGW Company Profile\n- Legal Name: TGW Inc.\n- Country of Operations: USA\n- Company Overview: TGW is a leading provider of logistics and material handling solutions, leveraging technology to enhance supply chain efficiency.\n- Website link: [www.tgw.com](http://www.tgw.com)\n\n---\n\n### 10. In-Scope Application: WERX\n- Application Name: WERX\n- General Description: WERX is a logistics management platform designed to optimize warehouse operations and supply chain visibility.\n- Key Technologies: Java, PostgreSQL, Docker, Kubernetes.\n- Current Hosting: On-premises data center.\n\n---\n\n### 11. Project Overview\n**Validation Summary**: The goal is to successfully validate WERX on Oracle Cloud Infrastructure (OCI), ensuring functional compatibility, performance, and readiness for future cloud-native enhancements. This involves replicating the on-premise OpenShift environment, including a 6-node cluster (3 masters, 3 workers), and integrating with external services like OpenUI and an Oracle 19c database.\n- Desired outcome:\n  - Validate WERX on OCI with Openshift Cluster, GPU VM, and Oracle 19c on IaaS.\n  - Achieve performance within specified latency requirements.\n- Scope boundaries:\n  - Focus on the technical validation of WERX on OCI.\n  - Exclude production migration and licensing setup.\n- Joint goals:\n  - Ensure a smooth lift-and-shift migration path for WERX.\n  - Explore opportunities for cloud-native enhancements.\n\n---\n\n### 12. Scope\n**In-Scope Items**:\n- Deployment of Openshift Cluster on OCI.\n- Configuration of GPU VM for simulation workloads.\n- Setup of Oracle 19c on IaaS with Data Guard for production environments.\n- Integration of WERX with OpenUI and the Oracle 19c database.\n**Out-of-Scope Items**:\n- Production migration of WERX to OCI.\n- Licensing setup for Oracle products.\n- SLA support for the production environment.\nValidation boundaries and limitations will be defined based on the current WERX architecture and the OCI services utilized.\n\n---\n\n### 13. Major Project Milestones\n| Milestone                         | Target Date | Completed | Comments                 |\n|----------------------------------|-------------|-----------|--------------------------|\n| Kickoff with Cloud Architect     | 2024-09-10  |           |                          |\n| OCI Network Setup                | 2024-09-14  |           |                          |\n| Terraform Code Finalization      | 2024-09-17  |           |                          |\n| Application Deployment in OCI    | 2024-09-21  |           |                          |\n| Final Validation & Review        | 2024-09-28  |           |                          |\n\n---\n\n### 14. Acceptance Criteria\n| Capability/Metric                                | Acceptance Criteria                                                       | Status  |\n|--------------------------------------------------|----------------------------------------------------------------------------|---------|\n| Kubernetes Deployment                            | WERX runs successfully on OCI OKE                 | TBD     |\n| OCI Streaming                                     | Kafka integration tested using OSS workloads                              | TBD     |\n| PostgreSQL                                        | DB deployed, configured, accessible                                       | TBD     |\n| Monitoring                                        | Basic metrics visible in OCI Monitoring dashboard                         | TBD     |\n| Security                                          | IAM + NSG + Encryption in Transit & At Rest                               | TBD     |\n\n---\n\n### 15. Current State Architecture\n**Diagram Description**: The current architecture consists of an on-premise OpenShift environment with 6 nodes, integrated with OpenUI and an Oracle 19c database. Docker and Helm are used for containerization and orchestration.\n**Tech Stack**: Docker, Helm, PostgreSQL, Java, OpenShift.\n**Known Issues/Pain Points**: Manual deployments, scaling issues, and limited visibility into performance metrics.\n\n---\n\n### 16. Target OCI Architecture\nThe target architecture will utilize the following OCI services:\n- **Openshift Cluster**: For deploying and managing WERX.\n- **GPU VM**: For simulation workloads, enhancing performance and efficiency.\n- **Oracle 19c on IaaS**: As the database solution, with Data Guard for production environments.\n**Service Mapping**:\n| Current Service | OCI Service      |\n|-----------------|------------------|\n| OpenShift       | Openshift Cluster|\n| Database        | Oracle 19c on IaaS|\n**Component Interaction**: WERX will interact with OpenUI and the Oracle 19c database through REST APIs and JDBC connections, respectively.\n**Diagram Placeholder**: A high-level architecture diagram will be provided, showing the integration of WERX with OCI services.\n\n---\n\n### 17. Implementation Details and Configuration Settings\n- **Openshift Cluster**: Provisioned with 6 nodes (3 masters, 3 workers), using the Oracle Cloud Infrastructure Console.\n- **GPU VM**: Configured for simulation workloads, with a shape that includes NVIDIA GPUs.\n- **Oracle 19c on IaaS**: Deployed with Data Guard for production environments, using Terraform for automation.\n- **OKE Node Pools**: Configured for high availability across multiple Availability Domains (ADs).\n- **PostgreSQL**: Utilized for storing application data, with a shape that ensures high performance and low latency.\n- **Streaming Configuration**: Kafka brokers will be configured for streaming data, with replication and mirroring for high availability.\n\n---\n\n### 18. Security Considerations\n- **IAM Policy**: Policies will be created to restrict access to resources, following the principle of least privilege.\n- **NSG Configuration**: Network Security Groups (NSGs) will be used to control traffic flow and ensure network isolation.\n- **Data Encryption**: Data at rest and in transit will be encrypted using OCI's encryption services.\n- **Audit Logs**: Logging Analytics will be configured to monitor and analyze audit logs for security incidents.\n\n---\n\n### 19. High Availability & Disaster Recovery\n- **OKE NodePools**: Spread across multiple ADs for high availability.\n- **PostgreSQL HA**: Configured with a replica for high availability and data protection.\n- **Object Storage**: Used for backups, with cross-region replication for disaster recovery.\n- **DNS Failover**: Traffic Management will be used for DNS failover in case of regional outages.\n- **DR Architecture**: A summary of the disaster recovery architecture will be provided, detailing the steps for recovery in case of a disaster.\n\n---\n\n### 20. Closing Feedback\n- **Oracle**: Feedback on the validation process and outcomes.\n- **TGW**: Feedback on the effectiveness of the validation in meeting their requirements and expectations.\n\n---\n\n### 21. Sign-Off Section\n- **Client Acceptance**: TGW acknowledges that the validation has met their requirements and expectations.\n- **Oracle Confirmation**: Oracle confirms that the validation has been successfully completed and that WERX is compatible with OCI.\n- **Final Next Steps**: Outline the next steps, including production migration and ongoing support.\n- **Version Tagging**: This document will be version-controlled, with changes tracked and approved by both parties.",
+            "type": "TEXT"
+          }
+        ],
+        "name": null,
+        "role": "ASSISTANT",
+        "tool_calls": []
+      }
+    }
+  ],
+  "time_created": "2025-07-07T08:24:31.537000+00:00"
+}
+['API_FORMAT_COHERE', 'API_FORMAT_GENERIC', '__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_api_format', '_choices', '_time_created', 'api_format', 'attribute_map', 'choices', 'get_subtype', 'swagger_types', 'time_created']
+INFO:     141.143.193.52:56116 - "POST /generar HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     188.166.125.197:46232 - "GET / HTTP/1.1" 404 Not Found
+INFO:     188.166.125.197:46248 - "GET /login HTTP/1.1" 404 Not Found
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3623]
+INFO:     Started server process [3653]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:56813 - "OPTIONS /generar HTTP/1.1" 200 OK
+Error extracting generated text: 'Response' object has no attribute 'get'
+INFO:     141.143.193.52:56813 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3653]
+INFO:     Started server process [3656]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Error extracting generated text: 'Response' object has no attribute 'json'
+INFO:     141.143.193.52:57222 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3656]
+INFO:     Started server process [3670]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+Error extracting generated text: 'Response' object is not subscriptable
+INFO:     141.143.193.52:58007 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3670]
+INFO:     Started server process [3750]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:60093 - "OPTIONS /generar HTTP/1.1" 200 OK
+Error extracting generated text: 'Response' object is not subscriptable
+INFO:     141.143.193.52:60093 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3750]
+INFO:     Started server process [3761]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+❌ Error during LLaMA chat generation: name 'chat_response' is not defined
+INFO:     141.143.193.52:60641 - "POST /generar HTTP/1.1" 500 Internal Server Error
+WARNING:  StatReload detected changes in 'generator.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [3761]
+INFO:     Started server process [3774]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     141.143.193.52:60900 - "POST /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:61259 - "POST /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:61809 - "OPTIONS /generar HTTP/1.1" 200 OK
+INFO:     141.143.193.52:61809 - "POST /generar HTTP/1.1" 200 OK
