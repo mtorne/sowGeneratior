@@ -178,7 +178,7 @@ Follow the **exact section structure and technical detail style** as shown in th
 ---
 
 ### 2. SoW Version History Table
-- 3 to 5 entries simulating evolving versions
+- Initial entry , from current date and Initial version as a comment
 - Table with: **Version #, Date, Revised By, Description of Change**
 
 ---
@@ -455,7 +455,8 @@ The summary , scope and expectations of the PoC are the following : - Validation
 """
 
 
-    resultado = generate_chat_llama(prompt2)
+    #resultado = generate_chat_llama(prompt2)
+    resultado = generate_chat(prompt2)
     texto_generado = resultado["response"]  # ✅ Accede al texto
 
     resumen = texto_generado.split("##")[0].strip()
@@ -511,6 +512,6 @@ The summary , scope and expectations of the PoC are the following : - Validation
        f.write(rendered_content)  # Write the rendered template, not the dictionary
 
     # Convert to docx using pandoc
-    subprocess.run(["pandoc", f"{nombre_base}.md", "-o", nombre_archivo])
-    return nombre_archivo
+    #subprocess.run(["pandoc", f"{nombre_base}.md", "-o", nombre_archivo])
+    return rendered_content
 

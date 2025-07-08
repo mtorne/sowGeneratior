@@ -4,6 +4,7 @@ function App() {
   const [cliente, setCliente] = useState('');
   const [proyecto, setProyecto] = useState('');
   const [servicios, setServicios] = useState('');
+  const [descripcionValidacion, setDescripcionValidacion] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleGenerar = async (e) => {
@@ -19,7 +20,8 @@ function App() {
         body: JSON.stringify({
           cliente,
           proyecto,
-          servicios_oci: servicios.split(',').map(s => s.trim())
+          servicios_oci: servicios.split(',').map(s => s.trim()),
+          descripcion_validacion: descripcionValidacion
         })
       });
 
@@ -31,7 +33,7 @@ function App() {
       const url = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'documento.docx';
+      a.download = `Documento_Validacion_${cliente || 'OCI'}.docx`;
       document.body.appendChild(a);
       a.click();
       a.remove();
@@ -44,20 +46,77 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '40px auto', fontFamily: 'Arial' }}>
-      <h1>Generador de Documento Técnico (OCI)</h1>
-      <form onSubmit={handleGenerar}>
-        <label>Cliente:</label><br />
-        <input value={cliente} onChange={e => setCliente(e.target.value)} required /><br /><br />
+    <div style={{ maxWidth: '600px', margin: '40px auto', fontFamily: 'Arial', padding: '20px' }}>
+      <h1 style={{ color: '#333', textAlign: 'center' }}>Generador de Documento Técnico (OCI)</h1>
+      <form onSubmit={handleGenerar} style={{ background: '#f9f9f9', padding: '20px', borderRadius: '8px' }}>
+        <div style={{ marginBottom: '15px' }}>
+          <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Cliente:</label>
+          <input 
+            value={cliente} 
+            onChange={e => setCliente(e.target.value)} 
+            required 
+            style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
+          />
+        </div>
 
-        <label>Proyecto:</label><br />
-        <input value={proyecto} onChange={e => setProyecto(e.target.value)} required /><br /><br />
+        <div style={{ marginBottom: '15px' }}>
+          <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Proyecto:</label>
+          <input 
+            value={proyecto} 
+            onChange={e => setProyecto(e.target.value)} 
+            required 
+            style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
+          />
+        </div>
 
-        <label>Servicios OCI (separados por coma):</label><br />
-        <input value={servicios} onChange={e => setServicios(e.target.value)} required /><br /><br />
+        <div style={{ marginBottom: '15px' }}>
+          <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
+            Servicios OCI (separados por coma):
+          </label>
+          <input 
+            value={servicios} 
+            onChange={e => setServicios(e.target.value)} 
+            required 
+            style={{ width: '100%', padding: '8px', borderRadius: '4px', border: '1px solid #ddd' }}
+            placeholder="Ej: Compute, Autonomous Database, VCN"
+          />
+        </div>
 
-        <button type="submit" disabled={loading}>
-          {loading ? 'Generando...' : 'Generar Documento'}
+        <div style={{ marginBottom: '20px' }}>
+          <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
+            Descripción de Validación:
+          </label>
+          <textarea 
+            value={descripcionValidacion} 
+            onChange={e => setDescripcionValidacion(e.target.value)} 
+            required 
+            style={{ 
+              width: '100%', 
+              padding: '8px', 
+              borderRadius: '4px', 
+              border: '1px solid #ddd',
+              minHeight: '100px'
+            }}
+            placeholder="Objetivos, alcance y criterios de éxito de la validación"
+          />
+        </div>
+
+        <button 
+          type="submit" 
+          disabled={loading}
+          style={{
+            background: '#007bff',
+            color: 'white',
+            padding: '10px 15px',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontSize: '16px',
+            width: '100%',
+            opacity: loading ? 0.7 : 1
+          }}
+        >
+          {loading ? 'Generando Documento...' : 'Generar Documento'}
         </button>
       </form>
     </div>
@@ -65,4 +124,3 @@ function App() {
 }
 
 export default App;
-

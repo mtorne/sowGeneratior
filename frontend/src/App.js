@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactMarkdown from 'react-markdown';
 
 function App() {
   const [cliente, setCliente] = useState('');
@@ -6,13 +7,15 @@ function App() {
   const [servicios, setServicios] = useState('');
   const [descripcionValidacion, setDescripcionValidacion] = useState('');
   const [loading, setLoading] = useState(false);
+  const [markdownPreview, setMarkdownPreview] = useState('');
 
   const handleGenerar = async (e) => {
     e.preventDefault();
     setLoading(true);
+    setMarkdownPreview('');
 
     try {
-      const response = await fetch('http://89.168.92.241:8000/generar', {
+      const response = await fetch('http://89.168.92.241:8000/generarmd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -26,18 +29,11 @@ function App() {
       });
 
       if (!response.ok) {
-        throw new Error('Error generando el documento');
+        throw new Error('Error generando el contenido');
       }
 
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `Documento_Validacion_${cliente || 'OCI'}.docx`;
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      window.URL.revokeObjectURL(url);
+      const markdownText = await response.text(); // Asumimos que el backend responde con Markdown
+      setMarkdownPreview(markdownText);
     } catch (error) {
       alert(error.message);
     } finally {
@@ -46,8 +42,9 @@ function App() {
   };
 
   return (
-    <div style={{ maxWidth: '600px', margin: '40px auto', fontFamily: 'Arial', padding: '20px' }}>
+    <div style={{ maxWidth: '800px', margin: '40px auto', fontFamily: 'Arial', padding: '20px' }}>
       <h1 style={{ color: '#333', textAlign: 'center' }}>Generador de Documento Técnico (OCI)</h1>
+      
       <form onSubmit={handleGenerar} style={{ background: '#f9f9f9', padding: '20px', borderRadius: '8px' }}>
         <div style={{ marginBottom: '15px' }}>
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Cliente:</label>
@@ -116,11 +113,19 @@ function App() {
             opacity: loading ? 0.7 : 1
           }}
         >
-          {loading ? 'Generando Documento...' : 'Generar Documento'}
+          {loading ? 'Generando Vista Previa...' : 'Generar Vista Previa'}
         </button>
       </form>
+
+      {markdownPreview && (
+        <div style={{ marginTop: '40px', padding: '20px', background: '#fff', border: '1px solid #ccc', borderRadius: '8px' }}>
+          <h2>Vista Previa del Documento</h2>
+          <ReactMarkdown>{markdownPreview}</ReactMarkdown>
+        </div>
+      )}
     </div>
   );
 }
 
 export default App;
+
