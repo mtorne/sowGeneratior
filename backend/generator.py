@@ -208,8 +208,10 @@ def generar_documento(datos):
 
     prompt2 = generar_prompt(datos,"prompt2.txt")
     prompt3 = generar_prompt(datos,"prompt3.txt")
+    prompt4 = generar_prompt(datos,"prompt4.txt")
+
     
-    prompt_used = prompt2
+    prompt_used = prompt4
 
     #resultado = generate_chat_llama(prompt_used)
     #resultado = generate_chat(prompt_used)
