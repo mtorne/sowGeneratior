@@ -12,7 +12,7 @@ function App() {
     setLoading(true);
 
     try {
-      const response = await fetch('http://89.168.92.241:8000/generar', {
+      const response = await fetch('http://89.168.92.241:8000/generarmd', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
