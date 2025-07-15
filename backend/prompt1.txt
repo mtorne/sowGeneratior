@@ -1,0 +1,85 @@
+Generate a comprehensive Oracle Cloud Infrastructure (OCI) Application Validation document for client {datos['cliente']} using the following OCI services: {', '.join(datos['servicios_oci'])}.
+
+
+Follow this exact structure and include all specified sections:
+
+1. **Document Header**
+- ISV: [Legal Company Name]
+- Application: [Product Name]
+- Type: Statement of Work
+- Date: [Current Date]
+- Version: [Version Number]
+- Confidentiality disclaimer
+
+2. **Version History Table**
+- 3-5 version entries showing evolution
+- Include version, date, author, description
+
+3. **Project Status**
+- Current phase (Planning/Implementation/Validation)
+- Next 3 critical actions with owners
+
+4. **Participant Table**
+- Oracle team members to be filled
+- Client team members to be filled
+- Include names, titles, emails
+
+5. **Project Summary**
+- Client business overview (1 paragraph)
+- Application purpose (1 paragraph)
+- Key technologies (bulleted list)
+- OCI services being implemented (section highlighting {', '.join(datos['servicios_oci'])})
+
+6. **Scope Definition**
+- In-scope components (bulleted list)
+- Out-of-scope items (bulleted list)
+- Validation boundaries
+
+7. **Milestone Timeline**
+- 5-7 key milestones
+- Dates, completion status, dependencies
+- Include OCI service implementation phases
+
+8. **Validation Criteria**
+- Technical metrics table (performance, availability)
+- Security requirements
+- Compliance checks
+
+9. **Architecture Sections**
+Current Environment:
+- Diagram description
+- Technology stack
+- Pain points
+
+OCI Target Architecture:
+- Services diagram ({', '.join(datos['servicios_oci'])} integration)
+- Component mapping
+- Migration approach
+
+10. **Implementation Plan**
+- Configuration details for {datos['servicios_oci'][0]} and other services
+- Security settings
+- Monitoring setup
+
+11. **Sign-off Section**
+- Client acceptance criteria
+- Oracle validation approval
+- Next steps post-validation
+
+Technical Requirements:
+1. Use exact OCI service names: {', '.join(datos['servicios_oci'])}
+2. Include 3-5 technical specifications per service
+3. Cover security configurations
+4. Address scalability considerations
+5. Use current dates
+
+Formatting Rules:
+- Markdown syntax
+- Tables for comparative data
+- Bullet points for lists
+- Bold for key terms
+- Consistent heading levels
+
+Generate complete, technically accurate content for all sections, focusing on practical implementation of {', '.join(datos['servicios_oci'])} for {datos['cliente']}'s environment.
+
+The summary , scope and expectations of the PoC are the following : - Validation Description: {datos['descripcion_validacion']}

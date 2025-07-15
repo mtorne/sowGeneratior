@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from fastapi.responses import FileResponse, JSONResponse
+from fastapi.responses import FileResponse, JSONResponse, PlainTextResponse
 from generator import generar_documento
 import oci
 from oci.generative_ai_inference.models import (
@@ -36,5 +36,15 @@ async def generar(request: Request):
             filename="documento.docx",
             media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         )
+    except Exception as e:
+        return JSONResponse(status_code=500, content={"error": str(e)})
+
+
+@app.post("/generarmd")
+async def generar(request: Request):
+    datos = await request.json()
+    try:
+        markdown = generar_documento(datos)
+        return PlainTextResponse(content=markdown, media_type="text/markdown")
     except Exception as e:
         return JSONResponse(status_code=500, content={"error": str(e)})

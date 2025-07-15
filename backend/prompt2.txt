@@ -1,0 +1,275 @@
+Generate a **Statement of Work (SoW)** document for an **Oracle Cloud Infrastructure (OCI) Application Validation** project for client **{datos['cliente']}**, using the following OCI services: **{', '.join(datos['servicios_oci'])}**.
+
+Follow the **exact section structure and technical detail style** as shown in the reference document `Comarch-Telco-OSS-ISV-v0.2`.
+
+---
+
+### 1. Document Header
+- ISV: **[datos['cliente']]**
+- Application: **[datos['proyecto']]**
+- Type: **Statement of Work**
+- Date: **[fecha_actual]**
+- Version: **0.1**
+- Include Oracle's standard **Confidentiality Disclaimer** (as in the original document).
+
+---
+
+### 2. SoW Version History Table
+- Initial entry , from current date and Initial version as a comment
+- Table with: **Version #, Date, Revised By, Description of Change**
+
+---
+
+### 3. Status and NEXT STEPS
+- Current project status: *Planning / In Progress / Completed*
+- Next 3 actions required with **Owner, Description**
+
+---
+
+### 4. Project Participants Table
+- Two tables: one for **Oracle**, one for **Client ({datos['cliente']})**
+- Include: **Name, Role, Email**
+- Keep color-coding format: Tan for Oracle, Green for Client
+
+---
+
+### 5. Project Framework
+- Summarize collaboration mode between Oracle and {datos['cliente']}, including:
+  - Responsibility areas
+  - Feedback loops
+  - Expected validation duration (2-3 weeks)
+
+---
+
+### 6. Required Contribution From Client
+- Clearly list what {datos['cliente']} must provide:
+  - Technical resources
+  - Diagrams or architectural artifacts
+  - Access to dev/test environment
+
+---
+
+### 7. Expected Deliverables From Oracle ISV Labs
+- Standard Oracle outputs:
+  - Terraform modules
+  - Target architecture in OCI
+  - Technical documentation
+  - CI/CD integration examples if relevant
+
+---
+
+### 8. Cloud Environment Used
+- Specify if PoC will run in:
+  - PoC Tenancy
+  - Temporary Test Tenancy
+  - Client tenancy (if already onboarded)
+
+---
+
+### 9. {datos['cliente']} Company Profile
+- Legal Name
+- Country of Operations
+- 2-3 line Company Overview
+- Website link
+
+---
+
+### 10. In-Scope Application: {datos['proyecto']}
+- Application Name
+- General Description
+- Key Technologies
+- Current Hosting: On-prem / Public Cloud / Hybrid
+
+---
+
+### 11. Project Overview
+- **Validation Summary**: {datos['descripcion_validacion']}
+- Use bullet points for:
+  - Desired outcome
+  - Scope boundaries
+  - Joint goals
+e.g , 
+Desired project outcome is to be provided by TGW and then agreed together with with Oracle.
+If the SoW is filled in separately, TGW can add the desired outcome and then synch with Oracle.
+Any change in the objectives and scope of the work will require mutual agreement between TGW and Oracle.
+
+Initial understanding of the scope - needs to be validaded with TGW
+Replicating the customer’s environment in a pay-as-you-go tenancy in Frankfurt to enable functional testing of TGW's containerized OpenShift setup. The focus is on a lift-and-shift approach without managed services, using a 6-node OpenShift cluster and supporting components like a database (Oracle 19c) and UI servers, with specific latency and connectivity needs..
+
+Desired outcome of TGW:
+Successfully validate their application stack in a replicated, containerized environment on OCI that mirrors the customer’s setup. This includes ensuring functional compatibility, performance within latency requirements, and readiness for future automation or cloud-native enhancements—ultimately enabling a smooth lift-and-shift migration path for customer environments.
+
+Desired Outcome, as jointly agreed with Oracle:
+Demonstrate that OCI can reliably host TGW’s containerized workloads in a way that matches customer requirements, including performance, scalability, and connectivity (e.g., to PLCs).
+
+---
+
+### 12. Scope
+- **In-Scope Items**: (e.g., PostgreSQL setup, streaming config, OKE deployment)
+- **Out-of-Scope Items**: (e.g., Production migration, Licensing setup, SLA support)
+- Validation boundaries and limitations
+
+---
+
+### 13. Major Project Milestones
+| Milestone                         | Target Date | Completed | Comments                 |
+|----------------------------------|-------------|-----------|--------------------------|
+| Kickoff with Cloud Architect     | YYYY-MM-DD  |           |                          |
+| OCI Network Setup                | YYYY-MM-DD  |           |                          |
+| Terraform Code Finalization      | YYYY-MM-DD  |           |                          |
+| Application Deployment in OCI    | YYYY-MM-DD  |           |                          |
+| Final Validation & Review        | YYYY-MM-DD  |           |                          |
+
+---
+
+### 14. Acceptance Criteria
+- Table format:
+| Capability/Metric                                | Acceptance Criteria                                                       | Status  |
+|--------------------------------------------------|----------------------------------------------------------------------------|---------|
+| Kubernetes Deployment                            | {datos['proyecto']} runs successfully on OCI OKE                 | TBD     |
+| OCI Streaming                                     | Kafka integration tested using OSS workloads                              | TBD     |
+| PostgreSQL                                        | DB deployed, configured, accessible                                       | TBD     |
+| Monitoring                                        | Basic metrics visible in OCI Monitoring dashboard                         | TBD     |
+| Security                                          | IAM + NSG + Encryption in Transit & At Rest                               | TBD     |
+
+---
+
+### 15. Current State Architecture
+- **Diagram Description**: Describe current setup (K8s clusters, Kafka, DB, etc.)
+- **Tech Stack**: Docker, Helm, PostgreSQL, Java, etc.
+- **Known Issues/Pain Points**: e.g., manual deployments, scaling issues
+
+---
+
+### 16. Target OCI Architecture
+- Describe how the following OCI services will be used: {', '.join(datos['servicios_oci'])}
+- Include:
+  - **Service Mapping** table (what maps to what)
+  - **Component Interaction**
+  - **Diagram Placeholder** (describe layout in text)
+
+---
+
+### 17. Implementation Details and Configuration Settings
+Show configuration and implementation details of  {', '.join(datos['servicios_oci'])} . The output must be grouped by major OCI service families, with sections for each of the following (if relevant):
+1. Networking
+
+    VCN design, CIDRs, Subnets
+
+    Internet/NAT Gateways, Service Gateways
+
+    Local Peering Gateways (LPGs)
+
+    Route tables, security lists, NSGs
+
+2. Compute
+
+    VM shapes and OCPUs/memory
+
+    OS and images used
+
+    Bastion/jump hosts
+
+    GPU instances (if any)
+
+3. Storage
+
+    Block Volumes, Object Storage
+
+    Boot volume size and configuration
+
+4. Container Services
+
+    OpenShift OCP deployment process (ISO, Assisted Installer)
+
+    Integration with OCI (via Resource Manager, Object Storage)
+
+5. IAM & Security
+
+    Compartments
+
+    IAM policies (optional)
+
+    Use of resource tags
+
+    Access control via NSGs or Security Lists
+
+6. Deployment Automation
+
+    Terraform/Resource Manager usage
+
+    CLI or Console steps (if any)
+
+    ISO upload, Assisted Installer
+
+📌 Additional Notes:
+
+    Use concise technical language suitable for inclusion in a cloud architecture Word document.
+
+    Highlight inter-service integration and deployment sequence when relevant.
+
+    Prefer bullet points and short paragraphs.
+
+    Format the output in markdown.
+
+
+---
+
+### 18. Security Considerations
+- IAM Policy examples
+- NSG configuration
+- Data encryption approach
+- Audit logs or Logging Analytics setup
+
+
+---
+
+### 19. High Availability & Disaster Recovery
+
+Provide a detailed description of High Availability (HA) and Disaster Recovery (DR) strategies, tailored to the OCI services used in the project. Include service-specific best practices where applicable. Examples may include:
+
+- **OKE**: Use of Node Pools distributed across multiple Availability Domains (ADs) or Fault Domains (FDs) to ensure resilience against hardware or AD failures.
+- **Database Services (e.g., Autonomous Database, PostgreSQL)**: Explain how features like standby databases, replicas, or Autonomous Data Guard are used for HA/DR, also when multiad makes sense p.e Autonomous database this part is managed by OCI.
+- **Object Storage**: Describe cross-region replication setup to maintain data durability in case of regional failures.
+- **Networking & DNS**: Use of Traffic Management policies in OCI DNS for active-active or active-passive failover scenarios.
+- **Backup & Restore**: Outline backup policies and the RPO/RTO objectives achieved.
+- **DR Strategy Summary**: Provide an overview of the architecture’s DR design, including region failover strategies, recovery time expectations, and testing procedures.
+
+Include two initial lines explaining main principles for HA in OCI. 
+
+Base the explanation on the actual services included in the solution (`{', '.join(datos['servicios_oci'])}`) and omit sections that are not relevant.
+
+---
+
+### 20. Closing Feedback
+- Placeholder for feedback from:
+  - Oracle
+  - {datos['cliente']}
+
+---
+
+### 21. Sign-Off Section
+- Client Acceptance
+- Oracle Confirmation
+- Final next steps
+- Version tagging
+
+---
+
+### Technical & Formatting Requirements
+
+1. Use **exact OCI service names**: {', '.join(datos['servicios_oci'])}
+2. Add **3–5 technical specs per service**
+3. Address **security, HA, and scalability**
+4. Format using:
+   - **Markdown syntax**
+   - Tables for specs and milestones
+   - **Bold** key terms
+   - Bullet points for lists
+   - Level 1 and 2 headings consistently
+5. Use current date for generated content
+6. Always use E5 shapes for VMs
+
+---
+
+Generate complete, realistic, technically accurate content for each section to build a professional SOW for OCI validation of **{datos['proyecto']}** at **{datos['cliente']}**, aligned with Oracle best practices and delivery format.
