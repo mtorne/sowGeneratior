@@ -181,7 +181,7 @@ Demonstrate that OCI can reliably host TGW’s containerized workloads in a way 
 
 ### 17. Implementation Details and Configuration Settings
 Show configuration and implementation details of  {', '.join(datos['servicios_oci'])} . The output must be grouped by major OCI service families, with sections for each of the following (if relevant):
-1. Networking
+####1. Networking
 
     VCN design, CIDRs, Subnets
 
@@ -191,7 +191,7 @@ Show configuration and implementation details of  {', '.join(datos['servicios_oc
 
     Route tables, security lists, NSGs
 
-2. Compute
+####2. Compute
 
     VM shapes and OCPUs/memory
 
@@ -201,19 +201,19 @@ Show configuration and implementation details of  {', '.join(datos['servicios_oc
 
     GPU instances (if any)
 
-3. Storage
+####3. Storage
 
     Block Volumes, Object Storage
 
     Boot volume size and configuration
 
-4. Container Services
+####4. Container Services
 
     OpenShift OCP deployment process (ISO, Assisted Installer)
 
     Integration with OCI (via Resource Manager, Object Storage)
 
-5. IAM & Security
+####5. IAM & Security
 
     Compartments
 
@@ -223,7 +223,7 @@ Show configuration and implementation details of  {', '.join(datos['servicios_oc
 
     Access control via NSGs or Security Lists
 
-6. Deployment Automation
+####6. Deployment Automation - if applies
 
     Terraform/Resource Manager usage
 
