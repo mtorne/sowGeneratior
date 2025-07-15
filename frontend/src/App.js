@@ -47,10 +47,10 @@ function App() {
 
   return (
     <div style={{ maxWidth: '600px', margin: '40px auto', fontFamily: 'Arial', padding: '20px' }}>
-      <h1 style={{ color: '#333', textAlign: 'center' }}>Generador de Documento Técnico (OCI)</h1>
+      <h1 style={{ color: '#333', textAlign: 'center' }}> Labs SoW Generator - Application Validation(OCI)</h1>
       <form onSubmit={handleGenerar} style={{ background: '#f9f9f9', padding: '20px', borderRadius: '8px' }}>
         <div style={{ marginBottom: '15px' }}>
-          <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Cliente:</label>
+          <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>Customer:</label>
           <input 
             value={cliente} 
             onChange={e => setCliente(e.target.value)} 
@@ -71,7 +71,7 @@ function App() {
 
         <div style={{ marginBottom: '15px' }}>
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
-            Servicios OCI (separados por coma):
+            OCI Services (comma separated):
           </label>
           <input 
             value={servicios} 
@@ -84,7 +84,7 @@ function App() {
 
         <div style={{ marginBottom: '20px' }}>
           <label style={{ display: 'block', marginBottom: '5px', fontWeight: 'bold' }}>
-            Descripción de Validación:
+            Project Description:
           </label>
           <textarea 
             value={descripcionValidacion} 
@@ -116,7 +116,7 @@ function App() {
             opacity: loading ? 0.7 : 1
           }}
         >
-          {loading ? 'Generando Documento...' : 'Generar Documento'}
+          {loading ? 'Document Generation ...' : 'Document Generated'}
         </button>
       </form>
     </div>
