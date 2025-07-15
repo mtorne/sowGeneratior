@@ -1,0 +1,79 @@
+Generate a complete, technically detailed **Statement of Work (SoW)** in **Markdown format** for an **Oracle Cloud Infrastructure (OCI) Application Validation** project.
+
+### Input Parameters:
+- **Client Name**: {datos['cliente']}
+- **Project Name**: {datos['proyecto']}
+- **OCI Services**: {', '.join(datos['servicios_oci'])}
+- **Validation Overview**: {datos['descripcion_validacion']}
+- **Current Date**: {fecha_actual}
+
+### Output Requirements:
+The document must:
+- Follow the exact section structure and formatting from the reference `Comarch-Telco-OSS-ISV-v0.2`
+- Be formatted entirely in **Markdown**
+- Contain:
+  - Proper use of `#` and `##` for headings
+  - Bullet points for lists
+  - **Bold** for key terms and labels
+  - Tables for structured data (e.g., milestones, acceptance criteria)
+- Use **realistic, technically accurate content** in each section
+- Use **E5 shapes** for compute examples
+- Emphasize:
+  - **Security**
+  - **High Availability (HA)**
+  - **Scalability**
+  - **OCI-native architecture**
+  - **Terraform automation** and **CI/CD readiness** (if relevant)
+
+---
+
+### 📄 Required Document Sections (Generate all):
+
+1. **Document Header**  
+2. **SoW Version History Table**  
+3. **Status and Next Steps**  
+4. **Project Participants Table (Oracle and Client)**  
+5. **Project Framework**  
+6. **Required Contribution From Client**  
+7. **Expected Deliverables From Oracle ISV Labs**  
+8. **Cloud Environment Used**  
+9. **{datos['cliente']} Company Profile**  
+10. **In-Scope Application: {datos['proyecto']}**  
+11. **Project Overview** (including validation summary, desired outcome, scope)  
+12. **Scope (In-Scope / Out-of-Scope)**  
+13. **Major Project Milestones** (in table format)  
+14. **Acceptance Criteria Table**  
+15. **Current State Architecture**  
+16. **Target OCI Architecture**  
+    - Describe usage of: {', '.join(datos['servicios_oci'])}
+    - Include: **Service Mapping table**, **Component Interaction**, **Diagram placeholder**  
+17. **Implementation Details and Configuration Settings**
+    - Group by OCI service family:
+      1. **Networking**
+      2. **Compute**
+      3. **Storage**
+      4. **Container Services**
+      5. **IAM & Security**
+      6. **Deployment Automation**
+18. **Security Considerations**  
+19. **High Availability & Disaster Recovery**
+    - Tailor strategy to actual services used: {', '.join(datos['servicios_oci'])}
+    - Include OCI-specific HA patterns (e.g., across ADs/FDs, backups, Traffic Mgmt)  
+20. **Closing Feedback**  
+21. **Sign-Off Section**
+
+---
+
+### 🧠 Additional Instructions
+
+- Use **realistic project goals** (e.g., replicating containerized setup, PoC validation, Terraform automation)
+- Include example formats and placeholder content where applicable (e.g., email tables, diagram descriptions)
+- Reference OCI best practices for architecture, networking, security, and automation
+- Ensure every OCI service listed in `{datos['servicios_oci']}` is used meaningfully and described technically
+- Format all tables using Markdown syntax
+
+---
+
+### ✍️ Final Prompt Use
+
+Use this structure to **generate a production-grade, Markdown-formatted SoW** for **{datos['proyecto']}** at **{datos['cliente']}**, validating their application stack using **OCI services**: {', '.join(datos['servicios_oci'])}. The tone should be technical, professional, and in line with Oracle ISV documentation standards.
