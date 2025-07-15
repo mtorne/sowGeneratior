@@ -5,7 +5,7 @@ Generate a complete, technically detailed **Statement of Work (SoW)** in **Markd
 - **Project Name**: {datos['proyecto']}
 - **OCI Services**: {', '.join(datos['servicios_oci'])}
 - **Validation Overview**: {datos['descripcion_validacion']}
-- **Current Date**: {fecha_actual}
+- **Current Date**: today
 
 ### Output Requirements:
 The document must:
